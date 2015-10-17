@@ -1,1 +1,1 @@
-web: gunicorn --bind=0.0.0.0:$PORT photomob.wsgi
+web: gunicorn --bind=0.0.0.0:$PORT stalkexchange.wsgi
