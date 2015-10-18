@@ -1,3 +1,5 @@
+{% load searchform %}
+
 <form method="get" action="/search">
     {% csrf_token %}
     {{ search_form.as_p }}

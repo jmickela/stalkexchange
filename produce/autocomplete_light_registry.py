@@ -1,4 +1,7 @@
+from django.utils.translation import ugettext as _
+
 import autocomplete_light.shortcuts as al
+
 from .models import GardenItem, ProduceType
 
 # This will generate a PersonAutocomplete class
@@ -7,7 +10,7 @@ al.register(ProduceType,
     search_fields=['title'],
     attrs={
         # This will set the input placeholder attribute:
-        'placeholder': 'Other model name ?',
+        'placeholder': _('Enter Produce'),
         # This will set the yourlabs.Autocomplete.minimumCharacters
         # options, the naming conversion is handled by jQuery
         'data-autocomplete-minimum-characters': 1,
