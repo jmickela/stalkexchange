@@ -3,6 +3,10 @@
 /***
       UNIVERSAL ELEMENTS
                         ***/
+.page-container {
+  padding-top: 150px;
+}
+
 .section-header {
   text-align: center;
   text-transform: uppercase;
@@ -73,7 +77,6 @@ input.submit, input[type="submit"] {
   }
 }
 .jumbotron {
-  margin-top: -21px;
   text-align: center;
   background-attachment: fixed;
   background-position: 50%;
@@ -84,11 +87,13 @@ input.submit, input[type="submit"] {
     color: #333;
     margin-top: 75px;
     margin-bottom: 45px;
+    font-size: 38px;
     text-transform: capitalize;
   }
 }
 
-.home-form {
+.home-form,
+.container > form {
   label {
     display: none;
   }
@@ -128,7 +133,11 @@ input.submit, input[type="submit"] {
      }
    }
 
-   form > input {
+   input, select {
+     box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+   }
+
+   input {
      position: relative;
      top: -1px;
      height: 31px;
@@ -136,7 +145,12 @@ input.submit, input[type="submit"] {
      color: #999;
    }
 
-   input[type="submit"] {
+   input[type="text"] {
+     border: none;
+   }
+
+   input[type="submit"],
+   button[type="submit"] {
      color: #fff;
    }
 }
@@ -153,7 +167,8 @@ input.submit, input[type="submit"] {
     font-size: 36px;
     margin-top: 0;
   }
-  .home-form input {
+  .home-form input,
+  .home-form button {
       margin-bottom: 5px;
       width: 100%;
       display: block;
@@ -178,15 +193,17 @@ input.submit, input[type="submit"] {
   }
 }
 
-input.submit {
+input.submit,
+button.submit {
   background: $green;
   border: none;
   border-radius: 0;
   -webkit-border-radius: 0;
   position: relative;
-  top: -1px;
+  top: 1px;
   color: #fff;
   transition: all 0.2s;
+  padding: 8px 15px;
 
   &:hover {
     background: $light-green;
