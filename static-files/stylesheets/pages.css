@@ -2,11 +2,17 @@
       UNIVERSAL ELEMENTS
                         ***/
 /* line 6, ../sass/pages.scss */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 11, ../sass/pages.scss */
 .page-container {
   padding-top: 150px;
 }
 
-/* line 10, ../sass/pages.scss */
+/* line 15, ../sass/pages.scss */
 .section-header {
   text-align: center;
   text-transform: uppercase;
@@ -14,7 +20,7 @@
   margin-bottom: 20px;
   position: relative;
 }
-/* line 17, ../sass/pages.scss */
+/* line 22, ../sass/pages.scss */
 .section-header:before, .section-header:after {
   content: '';
   display: block;
@@ -23,23 +29,23 @@
   border-top: 1px solid #ccc;
   width: 32.5%;
 }
-/* line 26, ../sass/pages.scss */
+/* line 31, ../sass/pages.scss */
 .section-header:after {
   right: 0;
 }
 
 @media (max-width: 768px) {
-  /* line 33, ../sass/pages.scss */
+  /* line 38, ../sass/pages.scss */
   .section-header:before, .section-header:after {
     width: 15%;
   }
 }
-/* line 39, ../sass/pages.scss */
+/* line 44, ../sass/pages.scss */
 input {
   padding: 5px;
 }
 
-/* line 43, ../sass/pages.scss */
+/* line 48, ../sass/pages.scss */
 input.submit, input[type="submit"] {
   padding: 7px 7px 8px;
   background: #063C22;
@@ -50,69 +56,69 @@ input.submit, input[type="submit"] {
 /***
       HOME
             ***/
-/* line 53, ../sass/pages.scss */
+/* line 58, ../sass/pages.scss */
 .mobile-home-section {
   text-align: center;
   padding: 75px 50px;
 }
-/* line 57, ../sass/pages.scss */
+/* line 62, ../sass/pages.scss */
 .mobile-home-section:first-child {
   padding-top: 150px;
 }
-/* line 61, ../sass/pages.scss */
+/* line 66, ../sass/pages.scss */
 .mobile-home-section h2 a {
   font-size: 32px;
   color: #fff;
   display: block;
 }
-/* line 67, ../sass/pages.scss */
+/* line 72, ../sass/pages.scss */
 .mobile-home-section.login {
   background: #999;
 }
-/* line 71, ../sass/pages.scss */
+/* line 76, ../sass/pages.scss */
 .mobile-home-section.browse {
   background: #bbb;
 }
-/* line 75, ../sass/pages.scss */
+/* line 80, ../sass/pages.scss */
 .mobile-home-section.how {
   background: #ddd;
 }
 
-/* line 79, ../sass/pages.scss */
+/* line 84, ../sass/pages.scss */
 .jumbotron {
   text-align: center;
-  background-attachment: fixed;
-  background-position: 50%;
-  height: 550px;
+  background: #fff;
+  height: 400px;
   margin-bottom: 0;
+  padding-top: 0;
 }
-/* line 86, ../sass/pages.scss */
+/* line 91, ../sass/pages.scss */
 .jumbotron h1 {
   color: #333;
-  margin-top: 75px;
+  margin-top: 0;
   margin-bottom: 45px;
   font-size: 38px;
   text-transform: capitalize;
 }
 
-/* line 97, ../sass/pages.scss */
+/* line 102, ../sass/pages.scss */
 .home-form label,
 .container > form label {
   display: none;
 }
-/* line 101, ../sass/pages.scss */
+/* line 106, ../sass/pages.scss */
 .home-form > span,
 .container > form > span {
   padding: 0 !important;
 }
-/* line 105, ../sass/pages.scss */
+/* line 110, ../sass/pages.scss */
 .home-form .autocomplete-light-widget.modern-style,
 .container > form .autocomplete-light-widget.modern-style {
   padding: 0;
   border: none;
   margin: 0;
 }
-/* line 111, ../sass/pages.scss */
+/* line 116, ../sass/pages.scss */
 .home-form select,
 .container > form select {
   appearance: none;
@@ -126,12 +132,12 @@ input.submit, input[type="submit"] {
   background: #fff;
   color: #999;
 }
-/* line 123, ../sass/pages.scss */
+/* line 128, ../sass/pages.scss */
 .home-form select option,
 .container > form select option {
   font-size: 18px;
 }
-/* line 126, ../sass/pages.scss */
+/* line 131, ../sass/pages.scss */
 .home-form select option :after,
 .container > form select option :after {
   content: '';
@@ -140,27 +146,26 @@ input.submit, input[type="submit"] {
   height: 20px;
   background: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==) no-repeat center right;
 }
-/* line 136, ../sass/pages.scss */
+/* line 141, ../sass/pages.scss */
 .home-form input, .home-form select,
 .container > form input,
 .container > form select {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-/* line 140, ../sass/pages.scss */
+/* line 145, ../sass/pages.scss */
 .home-form input,
 .container > form input {
   position: relative;
-  top: -1px;
   height: 31px;
   padding: 0 5px 5px;
   color: #999;
 }
-/* line 148, ../sass/pages.scss */
+/* line 152, ../sass/pages.scss */
 .home-form input[type="text"],
 .container > form input[type="text"] {
   border: none;
 }
-/* line 152, ../sass/pages.scss */
+/* line 156, ../sass/pages.scss */
 .home-form input[type="submit"],
 .home-form button[type="submit"],
 .container > form input[type="submit"],
@@ -169,24 +174,24 @@ input.submit, input[type="submit"] {
 }
 
 @media (max-width: 768px) {
-  /* line 159, ../sass/pages.scss */
+  /* line 163, ../sass/pages.scss */
   .jumbotron {
     margin-top: 0;
     height: 1025px;
   }
 
-  /* line 163, ../sass/pages.scss */
+  /* line 167, ../sass/pages.scss */
   .jumbotron > div {
     margin-bottom: 25px;
   }
 
-  /* line 166, ../sass/pages.scss */
+  /* line 170, ../sass/pages.scss */
   .jumbotron h1 {
     font-size: 36px;
     margin-top: 0;
   }
 
-  /* line 170, ../sass/pages.scss */
+  /* line 174, ../sass/pages.scss */
   .home-form input,
   .home-form button {
     margin-bottom: 5px;
@@ -194,27 +199,27 @@ input.submit, input[type="submit"] {
     display: block;
     padding: 5px;
   }
-  /* line 177, ../sass/pages.scss */
+  /* line 181, ../sass/pages.scss */
   .home-form input.submit,
   .home-form button.submit {
     padding: 10px 15px;
     height: auto;
   }
 }
-/* line 184, ../sass/pages.scss */
+/* line 188, ../sass/pages.scss */
 .home-search {
   display: block;
   padding: 25px 50px;
   background: #ccc;
   margin-bottom: 25px;
 }
-/* line 190, ../sass/pages.scss */
+/* line 194, ../sass/pages.scss */
 .home-search .text-contain {
   max-width: 565px;
   margin: 0 auto;
 }
 
-/* line 196, ../sass/pages.scss */
+/* line 200, ../sass/pages.scss */
 input.submit,
 button.submit {
   background: #063C22;
@@ -227,13 +232,13 @@ button.submit {
   transition: all 0.2s;
   padding: 8px 15px;
 }
-/* line 208, ../sass/pages.scss */
+/* line 212, ../sass/pages.scss */
 input.submit:hover,
 button.submit:hover {
   background: #006301;
 }
 
-/* line 213, ../sass/pages.scss */
+/* line 217, ../sass/pages.scss */
 .recent-item {
   background-color: #999;
   height: 125px;

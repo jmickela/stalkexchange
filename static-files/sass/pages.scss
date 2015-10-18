@@ -3,6 +3,11 @@
 /***
       UNIVERSAL ELEMENTS
                         ***/
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .page-container {
   padding-top: 150px;
 }
@@ -78,14 +83,14 @@ input.submit, input[type="submit"] {
 }
 .jumbotron {
   text-align: center;
-  background-attachment: fixed;
-  background-position: 50%;
-  height: 550px;
+  background: #fff;
+  height: 400px;
   margin-bottom: 0;
+  padding-top: 0;
 
   h1 {
     color: #333;
-    margin-top: 75px;
+    margin-top: 0;
     margin-bottom: 45px;
     font-size: 38px;
     text-transform: capitalize;
@@ -139,7 +144,6 @@ input.submit, input[type="submit"] {
 
    input {
      position: relative;
-     top: -1px;
      height: 31px;
      padding: 0 5px 5px;
      color: #999;
