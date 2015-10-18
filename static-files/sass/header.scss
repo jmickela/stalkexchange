@@ -15,18 +15,24 @@
 }
 
 .header-logo {
-  width: 190px;
-  height: 105px;
-  background: url('../images/stalkex-logo.png');
+  width: 225px;
+  height: 115px;
+  background: url('../images/se_logo.png');
   background-repeat: no-repeat;
   transition: all 0.2s;
+
+  a {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+  }
 }
 
 @media(max-width: 768px) {
   .header-logo {
-    max-width: 22%;
-    height: 43px;
-    background-size: cover;
+    max-width: 32%;
+    min-height: 55px;
+    background-size: 100%;
     position: absolute;
   }
 }
@@ -44,6 +50,7 @@
 #header.wide {
   background: $green;
   height: 45px;
+  opacity: 0.9;
 
   .header-logo {
     opacity: 0;
@@ -52,6 +59,13 @@
   .header-text {
     opacity: 1;
   }
+}
+
+.navbar:not(.wide) .navbar-collapse {
+  background: #ccc;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
 }
 
 .navbar-inverse {
@@ -172,7 +186,6 @@ header .container {
 .navbar-nav li a {
   color: #fff;
   text-transform: uppercase;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
 }
 
 /*mobile navbar*/
