@@ -17,7 +17,9 @@ def home(request):
             return redirect('profile_create')
         return render(request, 'home_profile.html', {'profile': request.user.profile})
 
-    items = GardenItem.objects.all()[20]
+    items = GardenItem.objects.all()
+    if len(items) > 20:
+        items = items[0:20]
 
     return render(request, "main.html", {'results': items})
 
