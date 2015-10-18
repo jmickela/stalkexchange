@@ -135,6 +135,7 @@ STATIC_URL = '/static/'
 
 AUTHENTICATION_BACKENDS = (
     'social.backends.facebook.FacebookOAuth2',
+    'social.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -146,6 +147,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "723613493129-leu9lk14jfamn7270mcnc2p43erbmin0.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "Dgx90f3FsZdRqYg08bpmJyqe"
 
 SOCIAL_AUTH_FACEBOOK_KEY    = '962707797122351'
 SOCIAL_AUTH_FACEBOOK_SECRET = '355c689e24e40ff1cd9c48b6af17c5f9'
