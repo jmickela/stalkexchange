@@ -3,17 +3,7 @@
 {% load i18n %}
 
 {% block content %}
-<div class="container">
-  <div class="col-xs-12 col-lg-8">
     {% postman_unread as unread_count %}
-
-<a href="{% url "profile_edit" %}">Edit your profile</a>
-<br/>
-<a href="{% url "postman:inbox" %}">Mailbox
-    {% if unread_count > 0 %}
-        ({{ unread_count  }})
-    {% endif %}
-</a>
 
     <h2 class="section-header profile-header">{% trans "My Profile" %}</h2>
 
@@ -45,24 +35,6 @@
         {% endfor %}
         <a href='{% url "wishlist_add_item" %}'>{% trans "+ ADD TO WISHLIST" %}</a>
     </div>
-</div>
-{% endblock %}
-
-{% block sidebar %}
-    <a href='{% url "add_to_garden" %}'>Add item to garden</a>
-    <br/>
-    <a href='{% url "wishlist_add_item" %}'>Add item to wishlist</a>
-    <br/>
-    <p>
-    Hello: {{ request.user.first_name }} {{ request.user.last_name }}
-  </p>
-    <br/>
-    <p>
-    About You:<br/>
-    {{ request.user.profile.about }}
-  </p>
-  </div>
-{% endblock %}
 {% endblock %}
 
 {% block sidebar %}
