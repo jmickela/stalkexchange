@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
+from wishlist.models import WishlistItem
+
 from .models import GardenItem
 from .forms import AddProduceForm, ProduceSearchForm
 
@@ -35,9 +37,14 @@ def remove_produce_from_profile(request, item_id=None):
 def garden_item_search(request):
     form = ProduceSearchForm(request.GET)
     results = None
+    type = request.GET.get('type')
     if request.GET.get('produce') is not None:
         produce = request.GET.get('produce')
-        results = GardenItem.objects.filter(produce__pk=produce).exclude(owner=request.user)
+        if type == "gardens":
+            results = GardenItem.objects.filter(produce__pk=produce).exclude(owner=request.user)
+        elif type == "wishlists":
+            results = WishlistItem.objects.filter(produce__pk=produce).exclude(owner=request.user)
+
 
         if request.GET.get('zip') is not None and request.GET.get('zip') != "":
             results = results.filter(owner__profile__zip=request.GET.get('zip'))
