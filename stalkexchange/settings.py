@@ -129,7 +129,7 @@ POSTMAN_SHOW_USER_AS = 'get_full_name'  # default is None
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# https://docs.djangoproject.com/en/1.8/howto/static-files-files/
 
 STATIC_URL = '/static/'
 

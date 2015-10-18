@@ -1,0 +1,155 @@
+/***
+      UNIVERSAL ELEMENTS
+                        ***/
+/* line 6, ../sass/pages.scss */
+.section-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+/* line 13, ../sass/pages.scss */
+.section-header:before, .section-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-top: 1px solid #ccc;
+  width: 32.5%;
+}
+/* line 22, ../sass/pages.scss */
+.section-header:after {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  /* line 29, ../sass/pages.scss */
+  .section-header:before, .section-header:after {
+    width: 15%;
+  }
+}
+/* line 35, ../sass/pages.scss */
+input {
+  padding: 5px;
+}
+
+/* line 39, ../sass/pages.scss */
+input.submit {
+  padding: 7px 7px 8px;
+}
+
+/***
+      HOME
+            ***/
+/* line 46, ../sass/pages.scss */
+.mobile-home-section {
+  text-align: center;
+  padding: 75px 50px;
+}
+/* line 50, ../sass/pages.scss */
+.mobile-home-section:first-child {
+  padding-top: 150px;
+}
+/* line 54, ../sass/pages.scss */
+.mobile-home-section h2 a {
+  font-size: 32px;
+  color: #fff;
+  display: block;
+}
+/* line 60, ../sass/pages.scss */
+.mobile-home-section.login {
+  background: #999;
+}
+/* line 64, ../sass/pages.scss */
+.mobile-home-section.browse {
+  background: #bbb;
+}
+/* line 68, ../sass/pages.scss */
+.mobile-home-section.how {
+  background: #ddd;
+}
+
+/* line 72, ../sass/pages.scss */
+.jumbotron {
+  margin-top: -21px;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: 50%;
+  height: 550px;
+  margin-bottom: 0;
+}
+/* line 80, ../sass/pages.scss */
+.jumbotron h1 {
+  color: #333;
+  margin-top: 75px;
+  margin-bottom: 45px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  /* line 89, ../sass/pages.scss */
+  .jumbotron {
+    margin-top: 0;
+    height: 1025px;
+  }
+
+  /* line 93, ../sass/pages.scss */
+  .jumbotron > div {
+    margin-bottom: 25px;
+  }
+
+  /* line 96, ../sass/pages.scss */
+  .jumbotron h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  /* line 100, ../sass/pages.scss */
+  .home-form input {
+    margin-bottom: 5px;
+    width: 100%;
+    display: block;
+    padding: 5px;
+  }
+  /* line 106, ../sass/pages.scss */
+  .home-form input.submit {
+    padding: 10px 15px;
+    height: auto;
+  }
+}
+/* line 113, ../sass/pages.scss */
+.home-search {
+  display: block;
+  padding: 25px 50px;
+  background: #ccc;
+  margin-bottom: 25px;
+}
+/* line 119, ../sass/pages.scss */
+.home-search .text-contain {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* line 125, ../sass/pages.scss */
+input.submit {
+  background: #063C22;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  position: relative;
+  top: -1px;
+  color: #fff;
+  transition: all 0.2s;
+}
+/* line 135, ../sass/pages.scss */
+input.submit:hover {
+  background: #006301;
+}
+
+/* line 140, ../sass/pages.scss */
+.recent-item {
+  background-color: #999;
+  height: 125px;
+  margin-bottom: 25px;
+}

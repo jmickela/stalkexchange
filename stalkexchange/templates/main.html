@@ -2,6 +2,102 @@
 
 {% block content %}
 
+    <!-- START CONTENT|HOME TEMPLATE -->
+  <section class="mobile-home visible-xs">
+    <div class="mobile-home-section login">
+      <h2><a href="#">Login</a></h2>
+    </div>
+    <div class="mobile-home-section browse">
+      <h2><a href="#">Browse</a></h2>
+    </div>
+    <div class="mobile-home-section how">
+      <h2><a href="#">How it works</a></h2>
+    </div>
+  </section>
+
+  <section class="jumbotron">
+    <h1 class="hero-title section-header">How It Works</h1>
+    <div class="col-xs-12 col-lg-4">
+      <img src="" width="300" height="250"/>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <img src="" width="300" height="250"/>
+    </div>
+    <div class="col-xs-12 col-lg-4">
+      <img src="" width="300" height="250"/>
+    </div>
+  </section>
+
+  <section class="home-search">
+    <div class="text-contain">
+      <h3 class="lead">Start Browsing</h3>
+      <div class="home-form">
+        <form>
+          <input class="search" type="text" placeholder="Enter Produce">
+          <input class="zipcode" type="text" placeholder="Zip Code">
+          <input type="submit" class="submit">
+        </form>
+      </div>
+    </div>
+  </section> <!--./home-search-->
+
+  <section class="recent-item-container container">
+    <h2 class="section-header">Recent Items</h2>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-2">
+        <div class="recent-item">
+        </div>
+      </div>
+    </div>
+  </section><!--</.recent-item-container-->
+  <!-- END CONTENT|HOME CONTENT -->
+
+
+
+
     {% if user and not user.is_anonymous %}
      <li>
        <a>Hello {{ user.get_full_name|default:user.username }}!</a>

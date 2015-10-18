@@ -1,0 +1,181 @@
+@import "variables.scss";
+
+/****
+      HEADER
+              ****/
+#header {
+  transition: all 0.2s;
+}
+
+#header:not(.wide),
+#header:not(.wide) .header-logo,
+#header:not(.wide) .header-text {
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+}
+
+.header-logo {
+  width: 190px;
+  height: 105px;
+  background: url('../images/stalkex-logo.png');
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+}
+
+@media(max-width: 768px) {
+  .header-logo {
+    max-width: 22%;
+    height: 43px;
+    background-size: cover;
+    position: absolute;
+  }
+}
+
+.header-text {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  transition: all 0.2s;
+}
+
+#header.wide {
+  background: $green;
+  height: 45px;
+
+  .header-logo {
+    opacity: 0;
+  }
+
+  .header-text {
+    opacity: 1;
+  }
+}
+
+.navbar-inverse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+header .container {
+  position: relative;
+}
+
+@media(min-width: 768px) {
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media(min-width: 768px) {
+.navbar-collapse {
+  float: right;
+}
+}
+
+@media(max-width: 768px) {
+  .navbar-collapse {
+    background: $green;
+    position: relative;
+  }
+
+  .navbar-toggle {
+    position: relative;
+    z-index: 999;
+
+    .icon-bar {
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+.navbar-nav {
+  li {
+    transition: all 0.2s;
+  }
+
+  li.active, li:hover {
+    background: #ccc;
+  }
+}
+
+.social-log-contain {
+  position: absolute;
+  top: 45px;
+  right: 115px;
+  width: 200px;
+  height: 0px;
+  background: #ccc;
+  overflow: hidden;
+  transition: all 0.2s;
+
+  &.on {
+    height: 50px;
+  }
+
+  a {
+    display: inline-block;
+    width: 45%;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+  }
+
+  i {
+    position: relative;
+    top: 25%;
+    &:before {
+      font-size: 20px;
+    }
+  }
+
+  .facebook {
+    background: $facebook;
+    &:hover {
+      background: darken($facebook, 15%);
+    }
+    &:active {
+      background: darken($facebook, 25%);
+    }
+  }
+
+  .google {
+    background: $google-plus;
+    &:hover {
+      background: darken($google-plus, 15%);
+    }
+    &:active {
+      background: darken($google-plus, 25%);
+    }
+  }
+}
+
+.page-title {
+  color: #fff;
+  float: left;
+  font-size: 32px;
+}
+
+.menu-container {
+  margin-top: -25px;
+}
+
+.navbar-nav li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
+/*mobile navbar*/
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+}

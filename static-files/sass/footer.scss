@@ -1,0 +1,31 @@
+footer {
+  margin-top: 45px;
+  padding-bottom: 15px;
+  background: #eee;
+
+  a {
+    color: #333;
+  }
+
+  .footer-social {
+    margin-top: 15px;
+    margin-bottom: 45px;
+  }
+}
+
+.copyright {
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+
+  a {
+    font-size: 14px;
+    color: #ccc;
+  }
+}
+
+.stay-connected.section-header {
+  &:before, &:after {
+    top: 10px;
+  }
+}

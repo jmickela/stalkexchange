@@ -1,0 +1,484 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/****
+      HEADER
+              ****/
+/* line 6, ../sass/header.scss */
+#header {
+  transition: all 0.2s;
+}
+
+/* line 10, ../sass/header.scss */
+#header:not(.wide),
+#header:not(.wide) .header-logo,
+#header:not(.wide) .header-text {
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+}
+
+/* line 17, ../sass/header.scss */
+.header-logo {
+  width: 190px;
+  height: 105px;
+  background: url("../images/stalkex-logo.png");
+  background-repeat: no-repeat;
+  transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+  /* line 26, ../sass/header.scss */
+  .header-logo {
+    max-width: 22%;
+    height: 43px;
+    background-size: cover;
+    position: absolute;
+  }
+}
+/* line 34, ../sass/header.scss */
+.header-text {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s;
+}
+
+/* line 44, ../sass/header.scss */
+#header.wide {
+  background: #063C22;
+  height: 45px;
+}
+/* line 48, ../sass/header.scss */
+#header.wide .header-logo {
+  opacity: 0;
+}
+/* line 52, ../sass/header.scss */
+#header.wide .header-text {
+  opacity: 1;
+}
+
+/* line 57, ../sass/header.scss */
+.navbar-inverse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* line 65, ../sass/header.scss */
+header .container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  /* line 70, ../sass/header.scss */
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 768px) {
+  /* line 78, ../sass/header.scss */
+  .navbar-collapse {
+    float: right;
+  }
+}
+@media (max-width: 768px) {
+  /* line 84, ../sass/header.scss */
+  .navbar-collapse {
+    background: #063C22;
+    position: relative;
+  }
+
+  /* line 89, ../sass/header.scss */
+  .navbar-toggle {
+    position: relative;
+    z-index: 999;
+  }
+  /* line 93, ../sass/header.scss */
+  .navbar-toggle .icon-bar {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+/* line 100, ../sass/header.scss */
+.navbar-nav li {
+  transition: all 0.2s;
+}
+/* line 104, ../sass/header.scss */
+.navbar-nav li.active, .navbar-nav li:hover {
+  background: #ccc;
+}
+
+/* line 109, ../sass/header.scss */
+.social-log-contain {
+  position: absolute;
+  top: 45px;
+  right: 115px;
+  width: 200px;
+  height: 0px;
+  background: #ccc;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+/* line 119, ../sass/header.scss */
+.social-log-contain.on {
+  height: 50px;
+}
+/* line 123, ../sass/header.scss */
+.social-log-contain a {
+  display: inline-block;
+  width: 45%;
+  margin-left: 5px;
+  margin-top: 5px;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+}
+/* line 133, ../sass/header.scss */
+.social-log-contain i {
+  position: relative;
+  top: 25%;
+}
+/* line 136, ../sass/header.scss */
+.social-log-contain i:before {
+  font-size: 20px;
+}
+/* line 141, ../sass/header.scss */
+.social-log-contain .facebook {
+  background: #3765A3;
+}
+/* line 143, ../sass/header.scss */
+.social-log-contain .facebook:hover {
+  background: #24426a;
+}
+/* line 146, ../sass/header.scss */
+.social-log-contain .facebook:active {
+  background: #172a44;
+}
+/* line 151, ../sass/header.scss */
+.social-log-contain .google {
+  background: #DC493C;
+}
+/* line 153, ../sass/header.scss */
+.social-log-contain .google:hover {
+  background: #ad2a1f;
+}
+/* line 156, ../sass/header.scss */
+.social-log-contain .google:active {
+  background: #812017;
+}
+
+/* line 162, ../sass/header.scss */
+.page-title {
+  color: #fff;
+  float: left;
+  font-size: 32px;
+}
+
+/* line 168, ../sass/header.scss */
+.menu-container {
+  margin-top: -25px;
+}
+
+/* line 172, ../sass/header.scss */
+.navbar-nav li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/*mobile navbar*/
+/* line 179, ../sass/header.scss */
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+}
+
+/***
+      UNIVERSAL ELEMENTS
+                        ***/
+/* line 6, ../sass/pages.scss */
+.section-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+/* line 13, ../sass/pages.scss */
+.section-header:before, .section-header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-top: 1px solid #ccc;
+  width: 32.5%;
+}
+/* line 22, ../sass/pages.scss */
+.section-header:after {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  /* line 29, ../sass/pages.scss */
+  .section-header:before, .section-header:after {
+    width: 15%;
+  }
+}
+/* line 35, ../sass/pages.scss */
+input {
+  padding: 5px;
+}
+
+/* line 39, ../sass/pages.scss */
+input.submit {
+  padding: 7px 7px 8px;
+}
+
+/***
+      HOME
+            ***/
+/* line 46, ../sass/pages.scss */
+.mobile-home-section {
+  text-align: center;
+  padding: 75px 50px;
+}
+/* line 50, ../sass/pages.scss */
+.mobile-home-section:first-child {
+  padding-top: 150px;
+}
+/* line 54, ../sass/pages.scss */
+.mobile-home-section h2 a {
+  font-size: 32px;
+  color: #fff;
+  display: block;
+}
+/* line 60, ../sass/pages.scss */
+.mobile-home-section.login {
+  background: #999;
+}
+/* line 64, ../sass/pages.scss */
+.mobile-home-section.browse {
+  background: #bbb;
+}
+/* line 68, ../sass/pages.scss */
+.mobile-home-section.how {
+  background: #ddd;
+}
+
+/* line 72, ../sass/pages.scss */
+.jumbotron {
+  margin-top: -21px;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: 50%;
+  height: 550px;
+  margin-bottom: 0;
+}
+/* line 80, ../sass/pages.scss */
+.jumbotron h1 {
+  color: #333;
+  margin-top: 75px;
+  margin-bottom: 45px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  /* line 89, ../sass/pages.scss */
+  .jumbotron {
+    margin-top: 0;
+    height: 1025px;
+  }
+
+  /* line 93, ../sass/pages.scss */
+  .jumbotron > div {
+    margin-bottom: 25px;
+  }
+
+  /* line 96, ../sass/pages.scss */
+  .jumbotron h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  /* line 100, ../sass/pages.scss */
+  .home-form input {
+    margin-bottom: 5px;
+    width: 100%;
+    display: block;
+    padding: 5px;
+  }
+  /* line 106, ../sass/pages.scss */
+  .home-form input.submit {
+    padding: 10px 15px;
+    height: auto;
+  }
+}
+/* line 113, ../sass/pages.scss */
+.home-search {
+  display: block;
+  padding: 25px 50px;
+  background: #ccc;
+  margin-bottom: 25px;
+}
+/* line 119, ../sass/pages.scss */
+.home-search .text-contain {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* line 125, ../sass/pages.scss */
+input.submit {
+  background: #063C22;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  position: relative;
+  top: -1px;
+  color: #fff;
+  transition: all 0.2s;
+}
+/* line 135, ../sass/pages.scss */
+input.submit:hover {
+  background: #006301;
+}
+
+/* line 140, ../sass/pages.scss */
+.recent-item {
+  background-color: #999;
+  height: 125px;
+  margin-bottom: 25px;
+}
+
+/* line 1, ../sass/footer.scss */
+footer {
+  margin-top: 45px;
+  padding-bottom: 15px;
+  background: #eee;
+}
+/* line 6, ../sass/footer.scss */
+footer a {
+  color: #333;
+}
+/* line 10, ../sass/footer.scss */
+footer .footer-social {
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+/* line 16, ../sass/footer.scss */
+.copyright {
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 21, ../sass/footer.scss */
+.copyright a {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* line 28, ../sass/footer.scss */
+.stay-connected.section-header:before, .stay-connected.section-header:after {
+  top: 10px;
+}
+
+/****
+      Bootstrap overrides
+                          ****/
+/* line 17, ../sass/screen.scss */
+.navbar-inverse {
+  background-color: transparent;
+}
+
+/* line 21, ../sass/screen.scss */
+.navbar-inverse a {
+  transition: all 0.2s;
+}
+
+/* line 25, ../sass/screen.scss */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+/* line 31, ../sass/screen.scss */
+body, h1, h2, h3, h4, h5, h6, p, span, div, a {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 35, ../sass/screen.scss */
+a, a:hover {
+  text-decoration: none;
+}
