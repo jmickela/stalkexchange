@@ -4,7 +4,6 @@
 
 {% block content %}
     {% postman_unread as unread_count %}
-    {% include 'produce_search_form.html' %}
 
 <a href="{% url "profile_edit" %}">Edit your profile</a>
 <a href="{% url "postman:inbox" %}">Mailbox

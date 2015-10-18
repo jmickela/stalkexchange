@@ -9,22 +9,19 @@ from .forms import ProfileForm
 
 # Create your views here.
 def home(request):
-    search_form = ProduceSearchForm()
     if not request.user.is_anonymous():
         if not hasattr(request.user, 'profile'):
             return redirect('profile_create')
-        return render(request, 'home_profile.html', {'profile': request.user.profile, "search_form": search_form})
+        return render(request, 'home_profile.html', {'profile': request.user.profile})
 
-    return render(request, "main.html", {"search_form": search_form})
+    return render(request, "main.html")
 
 def profile_view(request, user_id):
     if request.user.pk == user_id:
         return redirect("home")
 
     user = get_user_model().objects.get(pk=user_id)
-
-    search_form = ProduceSearchForm()
-    return render(request, "profile_view.html", {"user": user, "search_form": search_form})
+    return render(request, "profile_view.html", {"user": user})
 
 @login_required
 def profile_edit(request):
