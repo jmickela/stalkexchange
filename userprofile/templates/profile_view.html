@@ -7,14 +7,14 @@
     {% if user.profile.photo %}
         <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
     {% endif %}
-    <span class="profile-info">
+    <div class="profile-info">
         <span class="about-me">{% trans "About" %}</span>
         <div class="profile-about-text">{{ user.profile.about }}</div>
         <div class="profile-zip">
             <span class="label">{% trans "Zip Code" %}: </span>
             <span class="value">{{ user.profile.zip }}</span>
         </div>
-    </span>
+    </div>
 
 
     <h2 class="subsection-header">{% trans "What's in their Garden" %}</h2>

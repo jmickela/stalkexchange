@@ -548,6 +548,11 @@ button.submit:hover {
   margin-bottom: 25px;
 }
 
+/* line 246, ../sass/pages.scss */
+.profile-garden {
+  min-height: 250px;
+}
+
 /* line 1, ../sass/footer.scss */
 footer {
   margin-top: 45px;

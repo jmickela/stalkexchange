@@ -25,7 +25,9 @@
         {% for item in request.user.garden_items.all %}
             {% include "profile_produce_item.html" %}
         {% endfor %}
+        <div class="col-xs-12">
         <a href='{% url "add_to_garden" %}'>{% trans "+ ADD TO GARDEN" %}</a>
+      </div>
     </div>
 
     <h2 class="subsection-header">{% trans "My Wishlist" %}</h2>
