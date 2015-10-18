@@ -1,40 +1,42 @@
 {% extends "base.html" %}
 {% load postman_tags %}
-
+{% load i18n %}
 
 {% block content %}
     {% postman_unread as unread_count %}
 
-<a href="{% url "profile_edit" %}">Edit your profile</a>
-<a href="{% url "postman:inbox" %}">Mailbox
-    {% if unread_count > 0 %}
-        ({{ unread_count  }})
+    <h2 class="section-header profile-header">{% trans "My Profile" %}</h2>
+
+    {% if user.profile.photo %}
+        <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
     {% endif %}
-</a>
+    <span class="profile-info">
+        <span class="about-me">{% trans "About Me" %} <a href="{% url "profile_edit" %}">(edit)</a></span>
+        <div class="profile-about-text">{{ user.profile.about }}</div>
+        <div class="profile-zip">
+            <span class="label">{% trans "Zip Code" %}: </span>
+            <span class="value">{{ user.profile.zip }}</span>
+        </div>
+    </span>
 
 
-    <div>
-        <p>YOUR GARDEN:</p>
+    <h2 class="subsection-header">{% trans "What's in my Garden" %}</h2>
+    <div class="profile-garden">
         {% for item in request.user.garden_items.all %}
             {% include "profile_produce_item.html" %}
         {% endfor %}
+        <a href='{% url "add_to_garden" %}'>{% trans "+ ADD TO GARDEN" %}</a>
     </div>
 
-    <div>
-        <p>YOUR WISHLIST ITEMS:</p>
+    <h2 class="subsection-header">{% trans "My Wishlist" %}</h2>
+    <div class="profile-wishlist">
         {% for item in request.user.wishlist_items.all %}
             {% include "profile_wishlist_item.html" %}
         {% endfor %}
+        <a href='{% url "wishlist_add_item" %}'>{% trans "+ ADD TO WISHLIST" %}</a>
     </div>
-
 {% endblock %}
 
 {% block sidebar %}
-    <a href='{% url "add_to_garden" %}'>Add item to garden</a>
-    <a href='{% url "wishlist_add_item" %}'>Add item to wishlist</a>
 
-    Hello: {{ request.user.first_name }} {{ request.user.last_name }}
-
-    About You:
-    {{ request.user.profile.about }}
 {% endblock %}
