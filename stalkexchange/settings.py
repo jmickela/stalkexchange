@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'autocomplete_light',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +41,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'social.apps.django_app.default',
+    'django_messages',
+    'waliki',
+
+    'produce',
+    'userprofile',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,7 +64,7 @@ ROOT_URLCONF = 'stalkexchange.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["stalkexchange/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +72,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -116,3 +125,27 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+SOCIAL_AUTH_FACEBOOK_KEY    = '962707797122351'
+SOCIAL_AUTH_FACEBOOK_SECRET = '355c689e24e40ff1cd9c48b6af17c5f9'
+SOCIAL_AUTH_FACEBOOK_EXTENDED_PERMISSIONS = ['email',]
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email',]
+
+
+from urlparse import urlparse
+
+es = urlparse('http://paas:a226812db9d9ad103f67b02dbb57b898@fili-us-east-1.searchly.com')
+
+port = es.port or 80
+
+HAYSTACK_CONNECTIONS = {
+   'default': {
+       'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+       'URL': es.scheme + '://' + es.hostname + ':' + str(port),
+       'INDEX_NAME': 'documents',
+   },
+}
+
+
+if es.username:
+   HAYSTACK_CONNECTIONS['default']['KWARGS'] = {"http_auth": es.username + ':' + es.password}

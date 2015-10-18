@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import ProduceType, GardenItem
+
+admin.site.register(ProduceType)
+admin.site.register(GardenItem)

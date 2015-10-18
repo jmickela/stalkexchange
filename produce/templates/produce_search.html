@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% include "produce_search_form.html" %}
+
+    {% for result in results %}
+        <a href='{% url "profile_view" result.owner.pk %}'>
+            <div>
+                <p>{{ result.produce.title }}</p>
+                <p>{{ result.get_quantity_value }}</p>
+            </div>
+        </a>
+    {% endfor %}
+{% endblock %}

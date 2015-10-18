@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+YOUR GARDEN:
+    {% for item in user.garden_items.all %}
+        {% include "profile_produce_item.html" %}
+    {% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}

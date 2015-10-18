@@ -1,0 +1,1 @@
+In late july you should be planting yourself on the couch and watching the Giants!

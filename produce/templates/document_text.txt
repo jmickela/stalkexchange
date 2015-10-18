@@ -1,0 +1,2 @@
+{{ object.produce.title }}
+{{ object.description }}
