@@ -2,8 +2,7 @@
 
 <form method="get" action="/search">
     {% csrf_token %}
-
     {% search_form as form %}
-        {{ form.as_p }}
+    {{ form.as_p }}
     <input type="submit" value="Submit Query">
 </form>
