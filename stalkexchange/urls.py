@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
 
 urlpatterns = [
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+
     url("^$", 'userprofile.views.home', name="home"),
     url("^profile/create$", 'userprofile.views.profile_create', name='profile_create'),
     url("^profile/edit", 'userprofile.views.profile_edit', name='profile_edit'),

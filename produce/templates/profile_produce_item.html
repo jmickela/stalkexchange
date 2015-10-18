@@ -1,7 +1,25 @@
-<p>
-{{ item.produce.title }}
-{% if request.user == item.owner %}
-    - <a href="{% url "remove_from_garden" item.pk %}">Remove</a>
-{% endif %}
-{{ item.get_quantity_display }}
-</p>
+{% load i18n %}
+
+<div class="profile-produce-item">
+    <span class="image">
+        {% if item.image %}
+            <img src="/media/{{ item.image }}" />
+        {% else %}
+            <img src="/media/{{ item.produce.image }}" />
+        {% endif %}
+    </span>
+    <span class="item-info">
+        <div class="title"><strong>{{ item.produce.title }}</strong>
+            {% if request.user == item.owner %}<a href="{% url "remove_from_garden" item.pk %}">({% trans "remove" %})</a>
+            {% endif %}
+        </div>
+        <div class="extra-info">
+            {% trans item.get_quantity_display %} |
+            {% trans item.get_size_display %}
+            {% if item.is_organic %}| {% trans "Organic" %}{% endif %}
+        </div>
+        <div class="item-description">
+            {{ item.description }}
+        </div>
+    </span>
+</div>
