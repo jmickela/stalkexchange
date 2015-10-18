@@ -3,7 +3,7 @@
 
 {% block content %}
     <h2 class="section-header profile-header">{{ user.username }}</h2>
-
+    <a href='{% url 'postman:write' user %}'>Message user to proprose a trade.</a>
     {% if user.profile.photo %}
         <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
     {% endif %}
