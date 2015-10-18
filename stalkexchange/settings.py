@@ -92,7 +92,6 @@ WSGI_APPLICATION = 'stalkexchange.wsgi.application'
 
 import dj_database_url
 config = dj_database_url.config()
-print config
 if config != {}:
     DATABASES = dict()
     DATABASES['default'] = config
