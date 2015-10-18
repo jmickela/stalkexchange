@@ -1,8 +1,10 @@
 {% load searchform %}
 
+<div class="container">
 <form method="get" action="/search">
     {% csrf_token %}
     {% search_form as form %}
     {{ form.as_p }}
-    <input type="submit" value="Submit Query">
+    <button type="submit" class="fa fa-search submit">
 </form>
+</div>
