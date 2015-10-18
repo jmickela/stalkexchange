@@ -36,8 +36,11 @@ input {
   padding: 5px;
 }
 
-input.submit {
+input.submit, input[type="submit"] {
   padding: 7px 7px 8px;
+  background: $green;
+  color: #fff;
+  border: none;
 }
 
 /***
@@ -85,6 +88,59 @@ input.submit {
   }
 }
 
+.home-form {
+  label {
+    display: none;
+  }
+
+   > span {
+     padding: 0 !important;
+   }
+
+   .autocomplete-light-widget.modern-style {
+     padding: 0;
+     border: none;
+     margin: 0;
+   }
+
+   select {
+     appearance: none;
+     -webkit-appearance: none;
+     height: 29px;
+     position: relative;
+     top: -1px;
+     border-radius: 0;
+     border: none;
+     padding: 0 5px 5px;
+     background: #fff;
+     color: #999;
+
+     option {
+       font-size: 18px;
+
+       :after {
+         content:'';
+         display: inline-block;
+         width: 20px;
+         height: 20px;
+         background:url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==) no-repeat center right;
+       }
+     }
+   }
+
+   form > input {
+     position: relative;
+     top: -1px;
+     height: 31px;
+     padding: 0 5px 5px;
+     color: #999;
+   }
+
+   input[type="submit"] {
+     color: #fff;
+   }
+}
+
 @media (max-width:768px) {
   .jumbotron {
     margin-top: 0;
@@ -117,7 +173,7 @@ input.submit {
   margin-bottom: 25px;
 
   .text-contain {
-    max-width: 440px;
+    max-width: 565px;
     margin: 0 auto;
   }
 }
