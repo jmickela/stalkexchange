@@ -16,8 +16,9 @@ class ProduceSearchForm(autocomplete_light.ModelForm):
         ('wishlists', _('Wishlists')),
     )
 
+    type = forms.ChoiceField(choices=choices)
     zip = forms.CharField(required=False, max_length=5, label=_('Zip Code'))
-    type = forms.Select(choices=choices)
+
     class Meta:
         model = GardenItem
         fields = ['produce',]
