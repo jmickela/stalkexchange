@@ -97,6 +97,7 @@ $(document).ready(function() {
         {% if user and user.is_anonymous %}
             <li id="login-tab"><a href="#">{% trans "Login" %}</a></li>
         {% else %}
+            <li id="messages-tab"><a href="/messages/inbox">{% trans "Messages" %}</a></li>
             <li id="profile-tab"><a href="/">{% trans "Your Profile" %}</a></li>
         {% endif %}
         <li><a href="#language">{% trans "Language" %}</a></li>
