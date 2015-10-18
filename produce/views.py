@@ -41,9 +41,12 @@ def garden_item_search(request):
     if request.GET.get('produce') is not None:
         produce = request.GET.get('produce')
         if type == "gardens":
-            results = GardenItem.objects.filter(produce__pk=produce).exclude(owner=request.user)
+            results = GardenItem.objects.filter(produce__pk=produce)
         elif type == "wishlists":
-            results = WishlistItem.objects.filter(produce__pk=produce).exclude(owner=request.user)
+            results = WishlistItem.objects.filter(produce__pk=produce)
+
+        if request.user.is_authenticated():
+            results = results.exclude(owner=request.user)
 
 
         if request.GET.get('zip') is not None and request.GET.get('zip') != "":
