@@ -6,18 +6,18 @@
     {% postman_unread as unread_count %}
 
     <h2 class="section-header profile-header">{% trans "My Profile" %}</h2>
-
+<div class="container">
     {% if user.profile.photo %}
         <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
     {% endif %}
-    <span class="profile-info">
+    <div class="profile-info">
         <span class="about-me">{% trans "About Me" %} <a href="{% url "profile_edit" %}">(edit)</a></span>
         <div class="profile-about-text">{{ user.profile.about }}</div>
         <div class="profile-zip">
             <span class="label">{% trans "Zip Code" %}: </span>
             <span class="value">{{ user.profile.zip }}</span>
         </div>
-    </span>
+    </div>
 
 
     <h2 class="subsection-header">{% trans "What's in my Garden" %}</h2>
@@ -35,6 +35,7 @@
         {% endfor %}
         <a href='{% url "wishlist_add_item" %}'>{% trans "+ ADD TO WISHLIST" %}</a>
     </div>
+  </div>
 {% endblock %}
 
 {% block sidebar %}
