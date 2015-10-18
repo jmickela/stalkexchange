@@ -1,5 +1,5 @@
-<form method="get">
+<form method="get" action="/search">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ search_form.as_p }}
     <input type="submit" value="search">
 </form>

@@ -2,7 +2,8 @@
 
 {% block content %}
 
-YOUR GARDEN:
+    <a href='{% url 'postman:write' user %}'>Message user to proprose a trade.</a>
+
     {% for item in user.garden_items.all %}
         {% include "profile_produce_item.html" %}
     {% endfor %}

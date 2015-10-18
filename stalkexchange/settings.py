@@ -26,6 +26,7 @@ SECRET_KEY = 'zx4-r%+!$3xkwm-b(pd&+2()wzks6wyfke$ye7&6e_kuvdw6d9'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SITE_ID = 1
 
 
 # Application definition
@@ -39,13 +40,17 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
 
     'social.apps.django_app.default',
-    'django_messages',
+    #'django_messages',
+    'postman',
     'waliki',
 
     'produce',
     'userprofile',
+    'wishlist',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,12 +90,19 @@ WSGI_APPLICATION = 'stalkexchange.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+import dj_database_url
+config = dj_database_url.config()
+print config
+if config != {}:
+    DATABASES = dict()
+    DATABASES['default'] = config
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 
 # Internationalization
@@ -104,7 +116,17 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
+
+POSTMAN_DISALLOW_ANONYMOUS = True  # default is False
+POSTMAN_DISALLOW_MULTIRECIPIENTS = True  # default is False
+POSTMAN_DISALLOW_COPIES_ON_REPLY = True  # default is False
+POSTMAN_DISABLE_USER_EMAILING = True  # default is False
+POSTMAN_AUTO_MODERATE_AS = True  # default is None
+POSTMAN_SHOW_USER_AS = 'get_full_name'  # default is None
+# POSTMAN_QUICKREPLY_QUOTE_BODY = True  # default is False
+# POSTMAN_NOTIFIER_APP = None  # default is 'notification'
+# POSTMAN_MAILER_APP = None  # default is 'mailer'
 
 
 # Static files (CSS, JavaScript, Images)

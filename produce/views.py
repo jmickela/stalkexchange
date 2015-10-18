@@ -33,7 +33,7 @@ def remove_produce_from_profile(request, item_id=None):
     return render(request, "produce_remove_confirm.html")
 
 def garden_item_search(request):
-    form = ProduceSearchForm()
+    form = ProduceSearchForm(request.GET)
     results = None
     if request.GET.get('produce') is not None:
         produce = request.GET.get('produce')
@@ -42,4 +42,4 @@ def garden_item_search(request):
         if request.GET.get('zip') is not None and request.GET.get('zip') != "":
             results = results.filter(owner__profile__zip=request.GET.get('zip'))
 
-    return render(request, "produce_search.html", {'form': form, 'results': results})
+    return render(request, "produce_search.html", {'search_form': form, 'results': results})

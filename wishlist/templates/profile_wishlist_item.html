@@ -1,0 +1,7 @@
+<p>
+{{ item.produce.title }}
+{% if request.user == item.owner %}
+    - <a href="{% url "wishlist_remove_item" item.pk %}">Remove</a>
+{% endif %}
+{{ item.get_quantity_display }}
+</p>
