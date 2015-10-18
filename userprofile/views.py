@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 
+from produce.models import GardenItem
 from produce.forms import ProduceSearchForm
 
 from .models import UserProfile
@@ -16,7 +17,9 @@ def home(request):
             return redirect('profile_create')
         return render(request, 'home_profile.html', {'profile': request.user.profile})
 
-    return render(request, "main.html")
+    items = GardenItem.objects.all()[20]
+
+    return render(request, "main.html", {'results': items})
 
 def profile_view(request, user_id):
     if request.user.pk == user_id:

@@ -39,54 +39,9 @@
 
   <section class="recent-item-container container">
     <h2 class="section-header">Recent Items</h2>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-2">
-        <div class="recent-item">
-        </div>
-      </div>
+      {% for result in results %}
+          {% include "produce_search_result_item.html" %}
+      {% endfor %}
     </div>
   </section><!--</.recent-item-container-->
   <!-- END CONTENT|HOME CONTENT -->
