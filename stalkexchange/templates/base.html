@@ -94,12 +94,16 @@ $(document).ready(function() {
         <li><a href="#browse">{% trans "Browse" %}</a></li>
         <li><a href="#about">{% trans "How It Works" %}</a></li>
         <li><a href="#contact">{% trans "Resources" %}</a></li>
-        <li id="login-tab"><a href="#">{% trans "Login" %}</a></li>
+        {% if user and user.is_anonymous %}
+            <li id="login-tab"><a href="#">{% trans "Login" %}</a></li>
+        {% else %}
+            <li id="profile-tab"><a href="/">{% trans "Your Profile" %}</a></li>
+        {% endif %}
         <li><a href="#language">{% trans "Language" %}</a></li>
       </ul>
       <div class="social-log-contain">
-        <a class="facebook" href="#facebook"><i class="fa fa-facebook"></i></a>
-        <a class="google" href="#google"><i class="fa fa-google-plus"></i></a>
+        <a class="facebook" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}"><i class="fa fa-facebook"></i></a>
+        <a class="google" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}"><i class="fa fa-google-plus"></i></a>
       </div>
     </div><!--/.nav-collapse -->
 

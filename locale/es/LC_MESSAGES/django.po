@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-18 11:02-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: plot/models.py:10
+msgid "Open Access"
+msgstr ""
+
+#: plot/models.py:11
+msgid "Needs Permission to access"
+msgstr ""
+
+#: plot/models.py:19
+msgid "Shade"
+msgstr ""
+
+#: plot/models.py:20
+msgid "Partial Sun"
+msgstr ""
+
+#: plot/models.py:21
+msgid "Full Sun"
+msgstr ""
+
+#: plot/models.py:25
+msgid "Plot Size"
+msgstr ""
+
+#: plot/models.py:25
+msgid "Size of the plot in square feet."
+msgstr ""
+
+#: plot/models.py:26
+msgid "Accessibility"
+msgstr ""
+
+#: plot/models.py:26
+msgid "Is this plot accessible all the time or only at certain times?"
+msgstr ""
+
+#: plot/models.py:27
+msgid "Exchange Terms"
+msgstr ""
+
+#: plot/models.py:27
+msgid "What do you want in exchange for this plot?"
+msgstr ""
+
+#: plot/models.py:28
+msgid "Sun Exposure"
+msgstr ""
+
+#: plot/models.py:30
+msgid "Street Address"
+msgstr ""
+
+#: plot/models.py:31
+msgid "City"
+msgstr ""
+
+#: plot/models.py:32 produce/forms.py:20 userprofile/models.py:8
+msgid "Zip Code"
+msgstr ""
+
+#: plot/models.py:33
+msgid "State"
+msgstr ""
+
+#: produce/autocomplete_light_registry.py:13
+msgid "Enter Produce"
+msgstr ""
+
+#: produce/forms.py:15
+msgid "Gardens"
+msgstr ""
+
+#: produce/forms.py:16
+msgid "Wishlists"
+msgstr ""
+
+#: produce/models.py:6
+msgid "Type"
+msgstr ""
+
+#: produce/models.py:7 produce/models.py:36
+msgid "Description"
+msgstr ""
+
+#: produce/models.py:17
+msgid "A little"
+msgstr ""
+
+#: produce/models.py:18
+msgid "A lot"
+msgstr ""
+
+#: produce/models.py:26
+msgid "Big"
+msgstr ""
+
+#: produce/models.py:27
+msgid "Medium"
+msgstr ""
+
+#: produce/models.py:28
+msgid "Small"
+msgstr ""
+
+#: produce/models.py:33
+msgid "Quantity"
+msgstr ""
+
+#: produce/models.py:33
+msgid "How many do you have?"
+msgstr ""
+
+#: produce/models.py:34
+msgid "Is Organic?"
+msgstr ""
+
+#: produce/models.py:35
+msgid "Size"
+msgstr ""
+
+#: produce/models.py:35
+msgid "How big is this item?"
+msgstr ""
+
+#: produce/models.py:36
+msgid "Extra information..."
+msgstr ""
+
+#: stalkexchange/templates/base.html:8
+msgid "Stalk Exchange"
+msgstr ""
+
+#: stalkexchange/templates/base.html:82 stalkexchange/templates/base.html:191
+msgid "The Stalk Exchange"
+msgstr ""
+
+#: stalkexchange/templates/base.html:94
+msgid "Browse"
+msgstr ""
+
+#: stalkexchange/templates/base.html:95
+msgid "How It Works"
+msgstr ""
+
+#: stalkexchange/templates/base.html:96
+msgid "Resources"
+msgstr ""
+
+#: stalkexchange/templates/base.html:97
+msgid "Login"
+msgstr ""
+
+#: stalkexchange/templates/base.html:98
+msgid "Language"
+msgstr ""
+
+#: stalkexchange/templates/base.html:132
+msgid "Start Browsing"
+msgstr ""
+
+#: stalkexchange/templates/base.html:142
+msgid "Stay Connected"
+msgstr ""
+
+#: stalkexchange/templates/base.html:166
+msgid "Recent Posts"
+msgstr ""
+
+#: stalkexchange/templates/base.html:172
+msgid "Latest Tweets"
+msgstr ""
+
+#: stalkexchange/templates/base.html:178
+msgid "Newest Pins"
+msgstr ""
+
+#: stalkexchange/templates/base.html:184
+msgid "Featured Video"
+msgstr ""
+
+#: stalkexchange/templates/base.html:191
+msgid "all rights reserved. Site by"
+msgstr ""
+
+#: userprofile/models.py:7
+msgid "About"
+msgstr ""
+
+#: userprofile/models.py:8
+msgid "Your zip code is used to keep search results local"
+msgstr ""
