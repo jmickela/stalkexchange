@@ -1,9 +1,11 @@
+{% load i18n %}
+
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Stalk Exchange</title>
+  <title>{% trans "Stalk Exchange" %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
@@ -77,7 +79,7 @@ $(document).ready(function() {
     <div class="header-logo">
     </div>
 
-    <h2 class="header-text">The Stalk Exchange</h2>
+    <h2 class="header-text">{% trans "The Stalk Exchange" %}</h2>
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -89,11 +91,11 @@ $(document).ready(function() {
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#browse">Browse</a></li>
-        <li><a href="#about">How It Works</a></li>
-        <li><a href="#contact">Resources</a></li>
-        <li id="login-tab"><a href="#">Login</a></li>
-        <li><a href="#language">Language</a></li>
+        <li><a href="#browse">{% trans "Browse" %}</a></li>
+        <li><a href="#about">{% trans "How It Works" %}</a></li>
+        <li><a href="#contact">{% trans "Resources" %}</a></li>
+        <li id="login-tab"><a href="#">{% trans "Login" %}</a></li>
+        <li><a href="#language">{% trans "Language" %}</a></li>
       </ul>
       <div class="social-log-contain">
         <a class="facebook" href="#facebook"><i class="fa fa-facebook"></i></a>
@@ -127,7 +129,7 @@ $(document).ready(function() {
 <footer>
   <section class="home-search footer-search">
     <div class="text-contain">
-      <h3 class="lead">Start Browsing</h3>
+      <h3 class="lead">{% trans "Start Browsing" %}</h3>
       <div class="home-form">
         {% include 'produce_search_form.html' %}
       </div>
@@ -137,53 +139,57 @@ $(document).ready(function() {
   <section class="stay-connected section-header">
     <div class="container-fluid">
       <div id="footer-1" class="widget-area col-sm-12" role="complementary">
-			<div><h2 class="widget-title">Stay Connected</h2>			<div class="textwidget"><div class="footer-social hidden-sm hidden-xs">
-<a href="http://facebook.com/safecosmetics" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://facebook.com/safecosmetics', '\n\n');" target="_blank">
-<i class="fa fa-facebook"></i>
-</a>
+			<div><h2 class="widget-title">{% trans "Stay Connected" %}</h2>
+                <div class="textwidget"><div class="footer-social hidden-sm hidden-xs">
+                    <a href="http://facebook.com/safecosmetics" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://facebook.com/safecosmetics', '\n\n');" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
 
-<a href="http://twitter.com/SafeCosmeticsHQ" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://twitter.com/SafeCosmeticsHQ', '\n\n');" target="_blank">
-<i class="fa fa-twitter"></i>
-</a>
+                    <a href="http://twitter.com/SafeCosmeticsHQ" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://twitter.com/SafeCosmeticsHQ', '\n\n');" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
 
-<a href="http://instagram.com/safecosmeticshq" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://instagram.com/safecosmeticshq', '\n\n');" target="_blank">
-<i class="fa fa-instagram"></i>
-</a>
+                    <a href="http://instagram.com/safecosmeticshq" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://instagram.com/safecosmeticshq', '\n\n');" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
 
-<a href="http://sharethis.com" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://sharethis.com', '\n\n');" target="_blank">
-<i class="fa fa-share-alt"><span class="st_sharethis_large" displaytext="ShareThis" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/sharethis_32.png);"></span></span></span></i>
-</a>
-</div>
-</div>
-		</div><div>
+                    <a href="http://sharethis.com" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://sharethis.com', '\n\n');" target="_blank">
+                        <i class="fa fa-share-alt"><span class="st_sharethis_large" displaytext="ShareThis" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span class="stLarge" style="background-image: url(http://w.sharethis.com/images/sharethis_32.png);"></span></span></span></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+      <div>
 
 <div class="execphpwidget"><div class="social-contain col-md-3">
 <div class="facebook-feed">
-<h4><i class="fa fa-facebook social-icon"></i> Recent Posts</h4>
+<h4><i class="fa fa-facebook social-icon"></i> {% trans "Recent Posts" %}</h4>
 </div>
 </div>
 
 <div class="social-contain col-md-3">
 <div class="twitter-feed">
-<h4><i class="fa fa-twitter social-icon"></i> Latest Tweets</h4>
+<h4><i class="fa fa-twitter social-icon"></i> {% trans "Latest Tweets" %}</h4>
 </div>
 </div>
 
 <div class="social-contain col-md-3">
 <div class="feed-pinterest">
-<h4><i class="fa fa-pinterest social-icon"></i> Newest Pins</h4>
+<h4><i class="fa fa-pinterest social-icon"></i> {% trans "Newest Pins" %}</h4>
 </div>
 </div>
 
 <div class="social-contain col-md-3">
 <div class="feed-youtube">
-<h4><i class="fa fa-youtube social-icon"></i> Featured Video</h4>
+<h4><i class="fa fa-youtube social-icon"></i> {% trans "Featured Video" %}</h4>
 </div>
 </div></div>
 		</div>		</div>
     </div>
   </section>
-  <p class="copyright">&copy;2015 The Stalk Exchange, all rights reserved. Site by <a href="http://rootid.in">Rootid.in</a></p>
+  <p class="copyright">
+      &copy;2015 {% trans "The Stalk Exchange" %}, {% trans "all rights reserved. Site by" %} <a href="http://rootid.in">Rootid.in</a>
+  </p>
 </footer>
 <!-- END FOOTER TEMPLATE -->
 </html>
