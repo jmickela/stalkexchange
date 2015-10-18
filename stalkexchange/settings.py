@@ -156,21 +156,35 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '355c689e24e40ff1cd9c48b6af17c5f9'
 SOCIAL_AUTH_FACEBOOK_EXTENDED_PERMISSIONS = ['email',]
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email',]
 
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'social.pipeline.social_auth.associate_by_email',
+    'social.pipeline.user.create_user',
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
+    'userprofile.views.get_avatar', #save facebook profile image,
+)
 
-from urlparse import urlparse
 
-es = urlparse('http://paas:a226812db9d9ad103f67b02dbb57b898@fili-us-east-1.searchly.com')
-
-port = es.port or 80
-
-HAYSTACK_CONNECTIONS = {
-   'default': {
-       'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-       'URL': es.scheme + '://' + es.hostname + ':' + str(port),
-       'INDEX_NAME': 'documents',
-   },
-}
-
-
-if es.username:
-   HAYSTACK_CONNECTIONS['default']['KWARGS'] = {"http_auth": es.username + ':' + es.password}
+# from urlparse import urlparse
+#
+# es = urlparse('http://paas:a226812db9d9ad103f67b02dbb57b898@fili-us-east-1.searchly.com')
+#
+# port = es.port or 80
+#
+# HAYSTACK_CONNECTIONS = {
+#    'default': {
+#        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#        'URL': es.scheme + '://' + es.hostname + ':' + str(port),
+#        'INDEX_NAME': 'documents',
+#    },
+# }
+#
+#
+# if es.username:
+#    HAYSTACK_CONNECTIONS['default']['KWARGS'] = {"http_auth": es.username + ':' + es.password}

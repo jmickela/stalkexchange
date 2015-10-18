@@ -1,3 +1,5 @@
+import urllib
+
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
@@ -58,3 +60,19 @@ def profile_create(request):
         form = ProfileForm()
 
     return render(request, 'create_profile.html', {'form': form})
+
+
+def get_avatar(backend, strategy, details, response,
+        user=None, *args, **kwargs):
+    url = None
+    if backend.name == 'facebook':
+        url = "http://graph.facebook.com/%s/picture?type=large"%response['id']
+    if backend.name == 'twitter':
+        url = response.get('profile_image_url', '').replace('_normal','')
+    if backend.name == 'google-oauth2':
+        url = response['image'].get('url')
+        ext = url.split('.')[-1]
+    if url:
+        profile = UserProfile.objects.get_or_create(user=user)
+        profile.photo = url
+        profile.save()
