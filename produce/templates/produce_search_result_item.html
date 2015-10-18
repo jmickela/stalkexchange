@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<span class="result-item">
+    <span class="image">
+        {% if result.image %}
+            <img src="/media/{{ result.image }}" />
+        {% else %}
+            <img src="/media/{{ result.produce.image }}" />
+        {% endif %}
+    </span>
+    <span class="item-info">
+        <div class="title"><strong>{{ result.produce.title }}</strong></div>
+        <div class="extra-info">
+            {% trans result.get_quantity_display %} |
+            {% trans result.get_size_display %}
+            {% if result.is_organic %}| {% trans "Organic" %}{% endif %}
+        </div>
+        <div class="item-description">
+            {{ result.description }}
+        </div>
+    </span>
+</span>

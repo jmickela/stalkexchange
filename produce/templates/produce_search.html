@@ -4,11 +4,6 @@
     {% include "produce_search_form.html" %}
 
     {% for result in results %}
-        <a href='{% url "profile_view" result.owner.pk %}'>
-            <div>
-                <p>{{ result.produce.title }}</p>
-                <p>{{ result.get_quantity_value }}</p>
-            </div>
-        </a>
+        {% include "produce_search_result_item.html" %}
     {% endfor %}
 {% endblock %}
