@@ -173,6 +173,17 @@ SOCIAL_AUTH_PIPELINE = (
     'userprofile.views.get_avatar', #save facebook profile image,
 )
 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_REGION='us-west-2'
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = "stalkexchange"
+AWS_QUERYSTRING_AUTH = False #doesn't work!
+AWS_HEADERS = {
+    'Cache-Control': 'max-age=86400',
+}
 
 # from urlparse import urlparse
 #
