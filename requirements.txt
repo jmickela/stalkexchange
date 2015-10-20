@@ -13,6 +13,7 @@ dj-static==0.0.6
 django-autocomplete-light==2.2.10
 django-messages==0.5.1
 django-postman==3.3.1
+django-storages==1.1.8
 docutils==0.12
 gunicorn==19.3.0
 lxml==3.4.4

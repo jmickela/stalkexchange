@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     #'django_messages',
     'postman',
+    'storages',
     'waliki',
 
     'produce',
