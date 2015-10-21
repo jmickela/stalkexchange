@@ -12,7 +12,8 @@ body {
   padding-top: 150px;
 }
 
-.section-header {
+.section-header,
+#postman h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 28px;
@@ -27,11 +28,16 @@ body {
     top: 50%;
     border-top: 1px solid #ccc;
     width: 32.5%;
+    z-index: -1;
   }
 
   &:after {
     right: 0;
   }
+}
+
+p, span, div, a, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
 }
 
 @media(max-width: 768px) {
@@ -287,4 +293,157 @@ button.submit {
 
 div:not(.home-form) > .browse-container {
   text-align: center;
+}
+
+/* Profile View */
+
+.user-container {
+  margin: 0 auto;
+  width: 66%;
+}
+
+@media (max-width: 768px) {
+  .user-container {
+    width: 100%;
+  }
+
+  .profile-header {
+    font-size: 22px;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 75px;
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    float: none;
+    margin: 0 auto 10px;;
+  }
+}
+
+
+.profile-label {
+  font-weight: 600;
+}
+
+.value {
+  font-weight: 400;
+}
+
+.profile-produce-item {
+  margin-bottom: 25px;
+
+  .image {
+    display: block;
+    border-radius: 100%;
+    overflow:hidden;
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+    text-align: center;
+    float:left;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-produce-item {
+    .image {
+      float: none;
+    }
+  }
+
+  .item-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.subsection-header {
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.profile-garden,
+.profile-wishlist {
+  width: 66%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .profile-produce-item {
+    width: 100%;
+  }
+
+  .item-info {
+    display: inline-block;
+    margin-left: 25px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-garden,
+  .profile-wishlist {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+
+/*MESSAGE*/
+
+#postman {
+  margin: 0 auto;
+
+  th {
+    display: block;
+  }
+
+  td {
+    display: block;
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #postman {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 992px) {
+  #postman {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) {
+  #postman {
+    width: 750px;
+  }
+}
+
+button[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $green;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
 }

@@ -48,9 +48,9 @@
 }
 
 #header.wide {
-  background: $green;
+  background: #404040;
   height: 45px;
-  opacity: 0.9;
+  opacity: 0.95;
 
   .header-logo {
     opacity: 0;
@@ -130,6 +130,12 @@ header .container {
   .navbar-collapse {
     background: $green;
     position: relative;
+  }
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .navbar-toggle {

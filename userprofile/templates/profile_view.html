@@ -2,34 +2,37 @@
 {% load i18n %}
 
 {% block content %}
-  <div class="container">
     <h2 class="section-header profile-header">{{ user.username }}</h2>
-    <h4><a href='{% url 'postman:write' user %}'>Message user to proprose a trade.</a></h4>
+    <div class="container">
+      <div class="user-container container">
     {% if user.profile.photo %}
-        <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
+    <div class="profile-photo"><img src="{{ user.profile.photo }}" /></div>
     {% endif %}
     <div class="profile-info">
-        <span class="about-me">{% trans "About" %}</span>
-        <div class="profile-about-text">{{ user.profile.about }}</div>
+        <span class="about-me profile-label">{% trans "About Me" %}</span>
+        <div class="profile-about-text">{{ user.profile.about }}</div><br/>
         <div class="profile-zip">
-            <span class="label">{% trans "Zip Code" %}: </span>
+            <span class="profile-label">{% trans "Zip Code" %} </span><br/>
             <span class="value">{{ user.profile.zip }}</span>
         </div>
     </div>
+    <h4 class="message-link"><br/><a href='{% url 'postman:write' user %}'>{% trans "+ SEND ME A MESSAGE" %}</a></h4>
+  </div>
 
 
-    <h2 class="subsection-header">{% trans "What's in their Garden" %}</h2>
     <div class="profile-garden">
+      <h2 class="subsection-header">{% trans "What's in my Garden" %}</h2>
         {% for item in user.garden_items.all %}
             {% include "profile_produce_item.html" %}
         {% endfor %}
     </div>
 
-    <h2 class="subsection-header">{% trans "Their Wishlist" %}</h2>
     <div class="profile-wishlist">
+    <h2 class="subsection-header">{% trans "Their Wishlist" %}</h2>
         {% for item in user.wishlist_items.all %}
             {% include "profile_wishlist_item.html" %}
         {% endfor %}
+          <h4 class="message-link"><br/><a href='{% url 'postman:write' user %}'>{% trans "+ SEND ME A MESSAGE" %}</a></h4>
     </div>
   </div>
 {% endblock %}

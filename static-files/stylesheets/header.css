@@ -51,9 +51,9 @@
 
 /* line 50, ../sass/header.scss */
 #header.wide {
-  background: #063C22;
+  background: #404040;
   height: 45px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 /* line 55, ../sass/header.scss */
 #header.wide .header-logo {
@@ -136,25 +136,32 @@ header .container {
   }
 
   /* line 135, ../sass/header.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  /* line 141, ../sass/header.scss */
   .navbar-toggle {
     position: relative;
     z-index: 999;
   }
-  /* line 139, ../sass/header.scss */
+  /* line 145, ../sass/header.scss */
   .navbar-toggle .icon-bar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 }
-/* line 146, ../sass/header.scss */
+/* line 152, ../sass/header.scss */
 .navbar-nav li {
   transition: all 0.2s;
 }
-/* line 150, ../sass/header.scss */
+/* line 156, ../sass/header.scss */
 .navbar-nav li.active, .navbar-nav li:hover {
   background: #D6D4D5;
 }
 
-/* line 155, ../sass/header.scss */
+/* line 161, ../sass/header.scss */
 .social-log-contain {
   position: absolute;
   top: 45px;
@@ -165,11 +172,11 @@ header .container {
   overflow: hidden;
   transition: all 0.2s;
 }
-/* line 165, ../sass/header.scss */
+/* line 171, ../sass/header.scss */
 .social-log-contain.on {
   height: 50px;
 }
-/* line 169, ../sass/header.scss */
+/* line 175, ../sass/header.scss */
 .social-log-contain a {
   display: inline-block;
   width: 45%;
@@ -179,60 +186,60 @@ header .container {
   text-align: center;
   height: 40px;
 }
-/* line 179, ../sass/header.scss */
+/* line 185, ../sass/header.scss */
 .social-log-contain i {
   position: relative;
   top: 25%;
 }
-/* line 182, ../sass/header.scss */
+/* line 188, ../sass/header.scss */
 .social-log-contain i:before {
   font-size: 20px;
 }
-/* line 187, ../sass/header.scss */
+/* line 193, ../sass/header.scss */
 .social-log-contain .facebook {
   background: #3765A3;
 }
-/* line 189, ../sass/header.scss */
+/* line 195, ../sass/header.scss */
 .social-log-contain .facebook:hover {
   background: #24426a;
 }
-/* line 192, ../sass/header.scss */
+/* line 198, ../sass/header.scss */
 .social-log-contain .facebook:active {
   background: #172a44;
 }
-/* line 197, ../sass/header.scss */
+/* line 203, ../sass/header.scss */
 .social-log-contain .google {
   background: #DC493C;
 }
-/* line 199, ../sass/header.scss */
+/* line 205, ../sass/header.scss */
 .social-log-contain .google:hover {
   background: #ad2a1f;
 }
-/* line 202, ../sass/header.scss */
+/* line 208, ../sass/header.scss */
 .social-log-contain .google:active {
   background: #812017;
 }
 
-/* line 208, ../sass/header.scss */
+/* line 214, ../sass/header.scss */
 .page-title {
   color: #fff;
   float: left;
   font-size: 32px;
 }
 
-/* line 214, ../sass/header.scss */
+/* line 220, ../sass/header.scss */
 .menu-container {
   margin-top: -25px;
 }
 
-/* line 218, ../sass/header.scss */
+/* line 224, ../sass/header.scss */
 .navbar-nav li a {
   color: #333;
   text-transform: uppercase;
 }
 
 /*mobile navbar*/
-/* line 224, ../sass/header.scss */
+/* line 230, ../sass/header.scss */
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border: none;
 }

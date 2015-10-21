@@ -18,6 +18,8 @@ footer {
   color: #ccc;
   text-align: center;
   font-size: 14px;
+  padding-bottom: 15px;
+  padding-top: 50px;
 
   a {
     font-size: 14px;
@@ -28,5 +30,11 @@ footer {
 .stay-connected.section-header {
   &:before, &:after {
     top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  input, select, button:not(.navbar-toggle), #id_produce-wrapper {
+    width: 100%;
   }
 }

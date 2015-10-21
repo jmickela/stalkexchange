@@ -7,21 +7,25 @@
 
     <h2 class="section-header profile-header">{% trans "My Profile" %}</h2>
 <div class="container">
+  <div class="row">
+    <div class="user-container container">
     {% if user.profile.photo %}
-        <span class="profile-photo"><img src="{{ user.profile.photo }}" /></span>
+        <div class="profile-photo"><img src="{{ user.profile.photo }}" /></div>
     {% endif %}
     <div class="profile-info">
-        <span class="about-me">{% trans "About Me" %} <a href="{% url "profile_edit" %}">(edit)</a></span>
-        <div class="profile-about-text">{{ user.profile.about }}</div>
+        <span class="about-me profile-label">{% trans "About Me" %} <a href="{% url "profile_edit" %}">(edit)</a></span>
+        <div class="profile-about-text">{{ user.profile.about }}</div><br/>
         <div class="profile-zip">
-            <span class="label">{% trans "Zip Code" %}: </span>
+            <span class="profile-label">{% trans "Zip Code" %}: </span>
             <span class="value">{{ user.profile.zip }}</span>
         </div>
     </div>
+  </div>
+  </div>
 
 
-    <h2 class="subsection-header">{% trans "What's in my Garden" %}</h2>
     <div class="profile-garden">
+      <h2 class="subsection-header">{% trans "What's in my Garden" %}</h2>
         {% for item in request.user.garden_items.all %}
             {% include "profile_produce_item.html" %}
         {% endfor %}
@@ -30,13 +34,15 @@
       </div>
     </div>
 
-    <h2 class="subsection-header">{% trans "My Wishlist" %}</h2>
     <div class="profile-wishlist">
+      <h2 class="subsection-header">{% trans "My Wishlist" %}</h2>
         {% for item in request.user.wishlist_items.all %}
             {% include "profile_wishlist_item.html" %}
         {% endfor %}
         <a href='{% url "wishlist_add_item" %}'>{% trans "+ ADD TO WISHLIST" %}</a>
     </div>
+
+
   </div>
 {% endblock %}
 
