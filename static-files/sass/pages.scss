@@ -411,9 +411,11 @@ div:not(.home-form) > .browse-container {
 
 /*MESSAGE*/
 
-#postman table:not(#pm_messages) {
+#postman {
   margin: 0 auto;
+}
 
+#postman table:not(#pm_messages) {
   th {
     display: block;
   }
@@ -467,7 +469,7 @@ button[type="submit"] {
 
 #pm_messages {
   margin-top: 25px;
-  
+
   th, td {
     padding-right: 10px;
     padding-bottom: 5px;
