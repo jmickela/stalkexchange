@@ -761,15 +761,15 @@ div:not(.home-form) > .browse-container {
 }
 /*MESSAGE*/
 /* line 414, ../sass/pages.scss */
-#postman {
+#postman table:not(#pm_messages) {
   margin: 0 auto;
 }
 /* line 417, ../sass/pages.scss */
-#postman th {
+#postman table:not(#pm_messages) th {
   display: block;
 }
 /* line 421, ../sass/pages.scss */
-#postman td {
+#postman table:not(#pm_messages) td {
   display: block;
   clear: both;
   margin-top: 10px;
@@ -802,6 +802,27 @@ button[type="submit"] {
   border: none;
   padding: 10px 15px;
   color: #fff;
+}
+
+/* line 456, ../sass/pages.scss */
+.pm_body {
+  margin-bottom: 25px;
+}
+
+/*Message Archive*/
+/* line 463, ../sass/pages.scss */
+#pm_buttons button[type="submit"] {
+  background: #0095CB;
+}
+
+/* line 468, ../sass/pages.scss */
+#pm_messages {
+  margin-top: 25px;
+}
+/* line 471, ../sass/pages.scss */
+#pm_messages th, #pm_messages td {
+  padding-right: 10px;
+  padding-bottom: 5px;
 }
 
 /* line 1, ../sass/footer.scss */

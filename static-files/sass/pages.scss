@@ -411,7 +411,7 @@ div:not(.home-form) > .browse-container {
 
 /*MESSAGE*/
 
-#postman {
+#postman table:not(#pm_messages) {
   margin: 0 auto;
 
   th {
@@ -451,4 +451,25 @@ button[type="submit"] {
   border: none;
   padding: 10px 15px;
   color: #fff;
+}
+
+.pm_body {
+  margin-bottom: 25px;
+}
+
+/*Message Archive*/
+
+#pm_buttons {
+  button[type="submit"] {
+    background: $blue;
+  }
+}
+
+#pm_messages {
+  margin-top: 25px;
+  
+  th, td {
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
 }
