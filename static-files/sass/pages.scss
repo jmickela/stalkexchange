@@ -322,6 +322,7 @@ div:not(.home-form) > .browse-container {
   float: left;
   margin-right: 25px;
   margin-bottom: 75px;
+  max-width: 150px;
 }
 
 @media (max-width: 768px) {
@@ -390,6 +391,7 @@ div:not(.home-form) > .browse-container {
     display: inline-block;
     margin-left: 25px;
     text-align: left;
+    width: 75%;
   }
 }
 
