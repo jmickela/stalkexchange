@@ -24,18 +24,27 @@ footer .footer-social {
   padding-top: 50px;
 }
 /* line 24, ../sass/footer.scss */
+.copyright .footer-menu {
+  margin-bottom: 5px;
+}
+/* line 27, ../sass/footer.scss */
+.copyright .footer-menu a {
+  color: #333;
+  font-size: 16px;
+}
+/* line 33, ../sass/footer.scss */
 .copyright a {
   font-size: 14px;
   color: #ccc;
 }
 
-/* line 31, ../sass/footer.scss */
+/* line 40, ../sass/footer.scss */
 .stay-connected.section-header:before, .stay-connected.section-header:after {
   top: 10px;
 }
 
 @media (max-width: 768px) {
-  /* line 37, ../sass/footer.scss */
+  /* line 46, ../sass/footer.scss */
   input, select, button:not(.navbar-toggle), #id_produce-wrapper {
     width: 100%;
   }
