@@ -140,6 +140,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+WALIKI_ANONYMOUS_USER_PERMISSIONS = ('view_page', 'add_page', 'change_page')
 WALIKI_LOGGED_USER_PERMISSIONS = ('view_page', 'add_page', 'change_page')
 
 MEDIA_ROOT="media"
