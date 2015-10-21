@@ -551,3 +551,14 @@ button[type="submit"] {
     padding-bottom: 5px;
   }
 }
+
+label[for="id_is_organic"] {
+  display: inline-block !important;
+}
+
+#id_is_organic {
+  box-shadow: none;
+  position: relative;
+  top: 7px;
+  margin-bottom: 15px;
+}
