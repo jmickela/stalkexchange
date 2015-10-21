@@ -79,6 +79,14 @@ p, span, div, a, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.social-log-contain {
+  .fa,
+  .fa-facebook,
+  .fa-google-plus {
+    background: transparent;
+  }
+}
+
 @media(max-width: 768px) {
   .section-header {
     &:before, &:after {
@@ -313,6 +321,10 @@ button.submit {
     margin: 0 auto;
     text-align: center;
   }
+}
+
+.result-item:nth-of-type(7) {
+  clear:left;
 }
 
 @media(max-width:768px) {
