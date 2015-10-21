@@ -237,6 +237,16 @@ input.submit, input[type="submit"] {
    input[type="submit"],
    button[type="submit"] {
      color: #fff;
+     position: relative;
+     top: 5px;
+   }
+
+   .fa-search:before {
+     right: 7px;
+   }
+
+   .fa-search:hover {
+     background: lighten($green, 10%);
    }
 }
 
@@ -323,7 +333,7 @@ button.submit {
   }
 }
 
-.result-item:nth-of-type(7) {
+.result-item:nth-of-type(6n+1) {
   clear:left;
 }
 

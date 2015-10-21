@@ -255,27 +255,39 @@ input.submit, input[type="submit"] {
 .container > form input[type="submit"],
 .container > form button[type="submit"] {
   color: #fff;
+  position: relative;
+  top: 5px;
+}
+/* line 244, ../sass/pages.scss */
+.home-form .fa-search:before,
+.container > form .fa-search:before {
+  right: 7px;
+}
+/* line 248, ../sass/pages.scss */
+.home-form .fa-search:hover,
+.container > form .fa-search:hover {
+  background: #0b6a3c;
 }
 
 @media (max-width: 768px) {
-  /* line 244, ../sass/pages.scss */
+  /* line 254, ../sass/pages.scss */
   .jumbotron {
     margin-top: 0;
     height: 780px;
   }
 
-  /* line 248, ../sass/pages.scss */
+  /* line 258, ../sass/pages.scss */
   .jumbotron > div {
     margin-bottom: 25px;
   }
 
-  /* line 251, ../sass/pages.scss */
+  /* line 261, ../sass/pages.scss */
   .jumbotron h1 {
     font-size: 24px;
     margin-top: 0;
   }
 
-  /* line 255, ../sass/pages.scss */
+  /* line 265, ../sass/pages.scss */
   .home-form input,
   .home-form button {
     margin-bottom: 5px;
@@ -283,31 +295,31 @@ input.submit, input[type="submit"] {
     display: block;
     padding: 5px;
   }
-  /* line 262, ../sass/pages.scss */
+  /* line 272, ../sass/pages.scss */
   .home-form input.submit,
   .home-form button.submit {
     padding: 10px 15px;
     height: auto;
   }
 
-  /* line 269, ../sass/pages.scss */
+  /* line 279, ../sass/pages.scss */
   .container > form input, .container > form select, .container > form textarea {
     margin-bottom: 10px !important;
   }
 }
-/* line 275, ../sass/pages.scss */
+/* line 285, ../sass/pages.scss */
 .home-search {
   display: block;
   padding: 25px 50px;
   background: #91C856;
   margin-bottom: 25px;
 }
-/* line 281, ../sass/pages.scss */
+/* line 291, ../sass/pages.scss */
 .home-search .text-contain {
   max-width: 565px;
   margin: 0 auto;
 }
-/* line 286, ../sass/pages.scss */
+/* line 296, ../sass/pages.scss */
 .home-search .lead {
   color: #fff;
   padding: 0 15px;
@@ -316,7 +328,7 @@ input.submit, input[type="submit"] {
   font-size: 20px;
 }
 
-/* line 295, ../sass/pages.scss */
+/* line 305, ../sass/pages.scss */
 input.submit,
 button.submit {
   background: #063C22;
@@ -329,18 +341,18 @@ button.submit {
   transition: all 0.2s;
   padding: 8px 15px;
 }
-/* line 307, ../sass/pages.scss */
+/* line 317, ../sass/pages.scss */
 input.submit:hover,
 button.submit:hover {
   background: #91C856;
 }
 
-/* line 312, ../sass/pages.scss */
+/* line 322, ../sass/pages.scss */
 .result-item,
 .profile-produce-item {
   margin-bottom: 25px;
 }
-/* line 316, ../sass/pages.scss */
+/* line 326, ../sass/pages.scss */
 .result-item .image,
 .profile-produce-item .image {
   display: block;
@@ -351,71 +363,71 @@ button.submit:hover {
   text-align: center;
 }
 
-/* line 326, ../sass/pages.scss */
-.result-item:nth-of-type(7) {
+/* line 336, ../sass/pages.scss */
+.result-item:nth-of-type(6n+1) {
   clear: left;
 }
 
 @media (max-width: 768px) {
-  /* line 331, ../sass/pages.scss */
+  /* line 341, ../sass/pages.scss */
   .result-item {
     width: 48%;
   }
-  /* line 333, ../sass/pages.scss */
+  /* line 343, ../sass/pages.scss */
   .result-item .image {
     width: 120px;
     height: 120px;
   }
-  /* line 338, ../sass/pages.scss */
+  /* line 348, ../sass/pages.scss */
   .result-item .item-info {
     font-size: 14px;
   }
 }
-/* line 344, ../sass/pages.scss */
+/* line 354, ../sass/pages.scss */
 .profile-garden {
   min-height: 250px;
 }
 
-/* line 348, ../sass/pages.scss */
+/* line 358, ../sass/pages.scss */
 .item-info {
   text-align: center;
   color: #333;
 }
 
 /* SEARCH */
-/* line 356, ../sass/pages.scss */
+/* line 366, ../sass/pages.scss */
 .search-container {
   margin-top: 25px;
 }
 
-/* line 360, ../sass/pages.scss */
+/* line 370, ../sass/pages.scss */
 div:not(.home-form) > .browse-container {
   text-align: center;
 }
 
 /* Profile View */
-/* line 366, ../sass/pages.scss */
+/* line 376, ../sass/pages.scss */
 .user-container {
   margin: 0 auto;
   width: 66%;
 }
 
 @media (max-width: 768px) {
-  /* line 372, ../sass/pages.scss */
+  /* line 382, ../sass/pages.scss */
   .user-container {
     width: 100%;
   }
 
-  /* line 376, ../sass/pages.scss */
+  /* line 386, ../sass/pages.scss */
   .profile-header {
     font-size: 22px;
   }
-  /* line 378, ../sass/pages.scss */
+  /* line 388, ../sass/pages.scss */
   .profile-header:before, .profile-header:after {
     display: none;
   }
 }
-/* line 385, ../sass/pages.scss */
+/* line 395, ../sass/pages.scss */
 .profile-photo {
   overflow: hidden;
   border-radius: 100%;
@@ -425,33 +437,33 @@ div:not(.home-form) > .browse-container {
   max-width: 150px;
   max-height: 150px;
 }
-/* line 394, ../sass/pages.scss */
+/* line 404, ../sass/pages.scss */
 .profile-photo img {
   max-width: 100%;
 }
 
 @media (max-width: 768px) {
-  /* line 400, ../sass/pages.scss */
+  /* line 410, ../sass/pages.scss */
   .profile-photo {
     float: none;
     margin: 0 auto 10px;
   }
 }
-/* line 407, ../sass/pages.scss */
+/* line 417, ../sass/pages.scss */
 .profile-label {
   font-weight: 600;
 }
 
-/* line 411, ../sass/pages.scss */
+/* line 421, ../sass/pages.scss */
 .value {
   font-weight: 400;
 }
 
-/* line 415, ../sass/pages.scss */
+/* line 425, ../sass/pages.scss */
 .profile-produce-item {
   margin-bottom: 25px;
 }
-/* line 418, ../sass/pages.scss */
+/* line 428, ../sass/pages.scss */
 .profile-produce-item .image {
   display: block;
   border-radius: 100%;
@@ -464,18 +476,18 @@ div:not(.home-form) > .browse-container {
 }
 
 @media (max-width: 768px) {
-  /* line 432, ../sass/pages.scss */
+  /* line 442, ../sass/pages.scss */
   .profile-produce-item .image {
     float: none;
   }
 
-  /* line 437, ../sass/pages.scss */
+  /* line 447, ../sass/pages.scss */
   .item-info {
     text-align: center;
     margin-top: 10px;
   }
 }
-/* line 443, ../sass/pages.scss */
+/* line 453, ../sass/pages.scss */
 .subsection-header {
   font-size: 24px;
   margin-bottom: 15px;
@@ -484,19 +496,19 @@ div:not(.home-form) > .browse-container {
   margin-top: 15px;
 }
 
-/* line 451, ../sass/pages.scss */
+/* line 461, ../sass/pages.scss */
 .profile-garden,
 .profile-wishlist {
   width: 66%;
   margin: 0 auto;
   overflow: hidden;
 }
-/* line 457, ../sass/pages.scss */
+/* line 467, ../sass/pages.scss */
 .profile-garden .profile-produce-item,
 .profile-wishlist .profile-produce-item {
   width: 100%;
 }
-/* line 461, ../sass/pages.scss */
+/* line 471, ../sass/pages.scss */
 .profile-garden .item-info,
 .profile-wishlist .item-info {
   display: inline-block;
@@ -506,7 +518,7 @@ div:not(.home-form) > .browse-container {
 }
 
 @media (max-width: 768px) {
-  /* line 470, ../sass/pages.scss */
+  /* line 480, ../sass/pages.scss */
   .profile-garden,
   .profile-wishlist {
     width: 100%;
@@ -514,16 +526,16 @@ div:not(.home-form) > .browse-container {
   }
 }
 /*MESSAGE*/
-/* line 480, ../sass/pages.scss */
+/* line 490, ../sass/pages.scss */
 #postman {
   margin: 0 auto;
 }
 
-/* line 485, ../sass/pages.scss */
+/* line 495, ../sass/pages.scss */
 #postman table:not(#pm_messages) th {
   display: block;
 }
-/* line 489, ../sass/pages.scss */
+/* line 499, ../sass/pages.scss */
 #postman table:not(#pm_messages) td {
   display: block;
   clear: both;
@@ -532,24 +544,24 @@ div:not(.home-form) > .browse-container {
 }
 
 @media (min-width: 1200px) {
-  /* line 498, ../sass/pages.scss */
+  /* line 508, ../sass/pages.scss */
   #postman {
     width: 1170px;
   }
 }
 @media (min-width: 992px) {
-  /* line 504, ../sass/pages.scss */
+  /* line 514, ../sass/pages.scss */
   #postman {
     width: 970px;
   }
 }
 @media (min-width: 768px) {
-  /* line 510, ../sass/pages.scss */
+  /* line 520, ../sass/pages.scss */
   #postman {
     width: 750px;
   }
 }
-/* line 515, ../sass/pages.scss */
+/* line 525, ../sass/pages.scss */
 button[type="submit"] {
   -webkit-appearance: none;
   appearance: none;
@@ -559,22 +571,22 @@ button[type="submit"] {
   color: #fff;
 }
 
-/* line 524, ../sass/pages.scss */
+/* line 534, ../sass/pages.scss */
 .pm_body {
   margin-bottom: 25px;
 }
 
 /*Message Archive*/
-/* line 531, ../sass/pages.scss */
+/* line 541, ../sass/pages.scss */
 #pm_buttons button[type="submit"] {
   background: #0095CB;
 }
 
-/* line 536, ../sass/pages.scss */
+/* line 546, ../sass/pages.scss */
 #pm_messages {
   margin-top: 25px;
 }
-/* line 539, ../sass/pages.scss */
+/* line 549, ../sass/pages.scss */
 #pm_messages th, #pm_messages td {
   padding-right: 10px;
   padding-bottom: 5px;
