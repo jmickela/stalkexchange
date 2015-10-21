@@ -3,30 +3,31 @@ footer {
   margin-top: 45px;
   padding-bottom: 15px;
   background: #eee;
+  clear: both;
 }
-/* line 6, ../sass/footer.scss */
+/* line 7, ../sass/footer.scss */
 footer a {
   color: #333;
 }
-/* line 10, ../sass/footer.scss */
+/* line 11, ../sass/footer.scss */
 footer .footer-social {
   margin-top: 15px;
   margin-bottom: 45px;
 }
 
-/* line 16, ../sass/footer.scss */
+/* line 17, ../sass/footer.scss */
 .copyright {
   color: #ccc;
   text-align: center;
   font-size: 14px;
 }
-/* line 21, ../sass/footer.scss */
+/* line 22, ../sass/footer.scss */
 .copyright a {
   font-size: 14px;
   color: #ccc;
 }
 
-/* line 28, ../sass/footer.scss */
+/* line 29, ../sass/footer.scss */
 .stay-connected.section-header:before, .stay-connected.section-header:after {
   top: 10px;
 }

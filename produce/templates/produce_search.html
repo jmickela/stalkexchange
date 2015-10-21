@@ -2,8 +2,9 @@
 
 {% block content %}
     {% include "produce_search_form.html" %}
-
+<div class="container search-container">
     {% for result in results %}
         {% include "produce_search_result_item.html" %}
     {% endfor %}
+  </div>
 {% endblock %}

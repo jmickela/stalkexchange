@@ -64,15 +64,21 @@
   opacity: 1;
 }
 
-/* line 64, ../sass/header.scss */
+@media (min-width: 768px) {
+  /* line 66, ../sass/header.scss */
+  #header.wide li a {
+    color: #fff;
+  }
+}
+/* line 72, ../sass/header.scss */
 .navbar:not(.wide) .navbar-collapse {
-  background: #ccc;
+  background: #E9E9E9;
   transition: all 0.2s;
   transition-delay: 0.2s;
   -webkit-transition-delay: 0.2s;
 }
 
-/* line 71, ../sass/header.scss */
+/* line 79, ../sass/header.scss */
 .navbar-inverse {
   position: fixed;
   top: 0;
@@ -80,14 +86,36 @@
   width: 100%;
   z-index: 999;
 }
+/* line 86, ../sass/header.scss */
+.navbar-inverse .navbar-collapse {
+  padding: 0;
+}
+/* line 91, ../sass/header.scss */
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li.active > a
+> li.active > a:hover,
+.navbar-inverse .navbar-nav > li.active > a:focus,
+.navbar-inverse .navbar-nav > li.active > a:active {
+  color: #333;
+  font-size: 18px;
+  padding: 12px 18px;
+}
 
-/* line 79, ../sass/header.scss */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 106, ../sass/header.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    font-size: 12px;
+  }
+}
+/* line 111, ../sass/header.scss */
 header .container {
   position: relative;
 }
 
 @media (min-width: 768px) {
-  /* line 84, ../sass/header.scss */
+  /* line 116, ../sass/header.scss */
   .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     position: absolute;
     top: 0;
@@ -95,53 +123,53 @@ header .container {
   }
 }
 @media (min-width: 768px) {
-  /* line 92, ../sass/header.scss */
+  /* line 124, ../sass/header.scss */
   .navbar-collapse {
     float: right;
   }
 }
 @media (max-width: 768px) {
-  /* line 98, ../sass/header.scss */
+  /* line 130, ../sass/header.scss */
   .navbar-collapse {
     background: #063C22;
     position: relative;
   }
 
-  /* line 103, ../sass/header.scss */
+  /* line 135, ../sass/header.scss */
   .navbar-toggle {
     position: relative;
     z-index: 999;
   }
-  /* line 107, ../sass/header.scss */
+  /* line 139, ../sass/header.scss */
   .navbar-toggle .icon-bar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 }
-/* line 114, ../sass/header.scss */
+/* line 146, ../sass/header.scss */
 .navbar-nav li {
   transition: all 0.2s;
 }
-/* line 118, ../sass/header.scss */
+/* line 150, ../sass/header.scss */
 .navbar-nav li.active, .navbar-nav li:hover {
-  background: #ccc;
+  background: #D6D4D5;
 }
 
-/* line 123, ../sass/header.scss */
+/* line 155, ../sass/header.scss */
 .social-log-contain {
   position: absolute;
   top: 45px;
-  right: 115px;
+  right: 20.5%;
   width: 200px;
   height: 0px;
-  background: #ccc;
+  background: #D6D4D5;
   overflow: hidden;
   transition: all 0.2s;
 }
-/* line 133, ../sass/header.scss */
+/* line 165, ../sass/header.scss */
 .social-log-contain.on {
   height: 50px;
 }
-/* line 137, ../sass/header.scss */
+/* line 169, ../sass/header.scss */
 .social-log-contain a {
   display: inline-block;
   width: 45%;
@@ -151,60 +179,60 @@ header .container {
   text-align: center;
   height: 40px;
 }
-/* line 147, ../sass/header.scss */
+/* line 179, ../sass/header.scss */
 .social-log-contain i {
   position: relative;
   top: 25%;
 }
-/* line 150, ../sass/header.scss */
+/* line 182, ../sass/header.scss */
 .social-log-contain i:before {
   font-size: 20px;
 }
-/* line 155, ../sass/header.scss */
+/* line 187, ../sass/header.scss */
 .social-log-contain .facebook {
   background: #3765A3;
 }
-/* line 157, ../sass/header.scss */
+/* line 189, ../sass/header.scss */
 .social-log-contain .facebook:hover {
   background: #24426a;
 }
-/* line 160, ../sass/header.scss */
+/* line 192, ../sass/header.scss */
 .social-log-contain .facebook:active {
   background: #172a44;
 }
-/* line 165, ../sass/header.scss */
+/* line 197, ../sass/header.scss */
 .social-log-contain .google {
   background: #DC493C;
 }
-/* line 167, ../sass/header.scss */
+/* line 199, ../sass/header.scss */
 .social-log-contain .google:hover {
   background: #ad2a1f;
 }
-/* line 170, ../sass/header.scss */
+/* line 202, ../sass/header.scss */
 .social-log-contain .google:active {
   background: #812017;
 }
 
-/* line 176, ../sass/header.scss */
+/* line 208, ../sass/header.scss */
 .page-title {
   color: #fff;
   float: left;
   font-size: 32px;
 }
 
-/* line 182, ../sass/header.scss */
+/* line 214, ../sass/header.scss */
 .menu-container {
   margin-top: -25px;
 }
 
-/* line 186, ../sass/header.scss */
+/* line 218, ../sass/header.scss */
 .navbar-nav li a {
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
 }
 
 /*mobile navbar*/
-/* line 192, ../sass/header.scss */
+/* line 224, ../sass/header.scss */
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
   border: none;
 }

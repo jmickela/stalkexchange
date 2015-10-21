@@ -97,12 +97,24 @@ input.submit, input[type="submit"] {
     text-transform: uppercase;
   }
 
-  h3 {
-    font-size: 22px;
+  .intro-slide {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
+}
 
-  p {
-    font-size: 16px;
+@media(max-width: 992px) {
+  .jumbotron {
+    height: 1000px;
+
+    .intro-slide {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 }
 
@@ -148,9 +160,7 @@ input.submit, input[type="submit"] {
          content:'';
          display: inline-block;
          width: 20px;
-         height: 20px;
-         background:url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==) no-repeat center right;
-       }
+         height: 20px;       }
      }
    }
 
@@ -185,7 +195,7 @@ input.submit, input[type="submit"] {
     margin-bottom: 25px;
   }
   .jumbotron h1 {
-    font-size: 36px;
+    font-size: 24px;
     margin-top: 0;
   }
   .home-form input,
@@ -211,12 +221,20 @@ input.submit, input[type="submit"] {
 .home-search {
   display: block;
   padding: 25px 50px;
-  background: #ccc;
+  background: $light-green;
   margin-bottom: 25px;
 
   .text-contain {
     max-width: 565px;
     margin: 0 auto;
+  }
+
+  .lead {
+    color: #fff;
+    padding: 0 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 20px;
   }
 }
 
@@ -237,12 +255,36 @@ button.submit {
   }
 }
 
-.recent-item {
-  background-color: #999;
-  height: 125px;
+.result-item,
+.profile-produce-item {
   margin-bottom: 25px;
+
+  .image {
+    display: block;
+    border-radius: 100%;
+    overflow:hidden;
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .profile-garden {
   min-height: 250px;
+}
+
+.item-info {
+  text-align: center;
+  color: #333;
+}
+
+
+/* SEARCH */
+
+.search-container {
+  margin-top: 25px;
+}
+
+div:not(.home-form) > .browse-container {
+  text-align: center;
 }
