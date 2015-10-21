@@ -12,6 +12,19 @@ footer {
     margin-top: 15px;
     margin-bottom: 45px;
   }
+
+  .social-contain .fa {
+    position: relative;
+    top: -3px;
+
+    &:before {
+      top: 0;
+    }
+  }
+
+  .social-contain h4 {
+    font-size: 24px;
+  }
 }
 
 .copyright {
@@ -45,5 +58,19 @@ footer {
 @media (max-width: 768px) {
   input, select, button:not(.navbar-toggle), #id_produce-wrapper {
     width: 100%;
+  }
+
+  footer {
+    h2, h4 {
+      margin-bottom: 25px;
+    }
+
+    .social-contain h4 {
+      font-size: 20px;
+
+      .fa:before {
+        top: 3px;
+      }
+    }
   }
 }

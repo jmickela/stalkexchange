@@ -14,8 +14,21 @@ footer .footer-social {
   margin-top: 15px;
   margin-bottom: 45px;
 }
+/* line 16, ../sass/footer.scss */
+footer .social-contain .fa {
+  position: relative;
+  top: -3px;
+}
+/* line 20, ../sass/footer.scss */
+footer .social-contain .fa:before {
+  top: 0;
+}
+/* line 25, ../sass/footer.scss */
+footer .social-contain h4 {
+  font-size: 24px;
+}
 
-/* line 17, ../sass/footer.scss */
+/* line 30, ../sass/footer.scss */
 .copyright {
   color: #ccc;
   text-align: center;
@@ -23,29 +36,42 @@ footer .footer-social {
   padding-bottom: 15px;
   padding-top: 50px;
 }
-/* line 24, ../sass/footer.scss */
+/* line 37, ../sass/footer.scss */
 .copyright .footer-menu {
   margin-bottom: 5px;
 }
-/* line 27, ../sass/footer.scss */
+/* line 40, ../sass/footer.scss */
 .copyright .footer-menu a {
   color: #333;
   font-size: 16px;
 }
-/* line 33, ../sass/footer.scss */
+/* line 46, ../sass/footer.scss */
 .copyright a {
   font-size: 14px;
   color: #ccc;
 }
 
-/* line 40, ../sass/footer.scss */
+/* line 53, ../sass/footer.scss */
 .stay-connected.section-header:before, .stay-connected.section-header:after {
   top: 10px;
 }
 
 @media (max-width: 768px) {
-  /* line 46, ../sass/footer.scss */
+  /* line 59, ../sass/footer.scss */
   input, select, button:not(.navbar-toggle), #id_produce-wrapper {
     width: 100%;
+  }
+
+  /* line 64, ../sass/footer.scss */
+  footer h2, footer h4 {
+    margin-bottom: 25px;
+  }
+  /* line 68, ../sass/footer.scss */
+  footer .social-contain h4 {
+    font-size: 20px;
+  }
+  /* line 71, ../sass/footer.scss */
+  footer .social-contain h4 .fa:before {
+    top: 3px;
   }
 }

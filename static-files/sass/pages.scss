@@ -40,6 +40,45 @@ p, span, div, a, h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+.fa {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+  background: #ccc;
+
+  &:before {
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+  }
+
+  &.fa-facebook {
+    background: $facebook;
+  }
+
+  &.fa-twitter {
+    background: $twitter;
+  }
+
+  &.fa-share-alt {
+    background: $share-alt;
+  }
+
+  &.fa-flickr {
+    background: $flickr;
+  }
+
+  &.fa-youtube {
+    background: $youtube;
+  }
+
+  &.fa-share-alt:before {
+    top: -6px;
+  }
+}
+
 @media(max-width: 768px) {
   .section-header {
     &:before, &:after {
@@ -64,11 +103,8 @@ input.submit, input[type="submit"] {
             ***/
 .mobile-home-section {
   text-align: center;
-  padding: 75px 50px;
-
-  &:first-child {
-    padding-top: 150px;
-  }
+  padding: 25px 50px;
+  margin-bottom: 25px;
 
   h2 a {
     font-size: 32px;
@@ -77,16 +113,20 @@ input.submit, input[type="submit"] {
   }
 
   &.login {
-    background: #999;
+    background: $blue;
   }
 
   &.browse {
-    background: #bbb;
+    background: $light-green;
   }
 
   &.how {
     background: #ddd;
   }
+}
+
+.mobile-home {
+  margin-top: -50px;
 }
 .jumbotron {
   text-align: center;
@@ -195,7 +235,7 @@ input.submit, input[type="submit"] {
 @media (max-width:768px) {
   .jumbotron {
     margin-top: 0;
-    height: 1025px;
+    height: 780px;
   }
   .jumbotron > div {
     margin-bottom: 25px;
@@ -272,6 +312,20 @@ button.submit {
     width: 150px;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+@media(max-width:768px) {
+  .result-item {
+    width: 48%;
+    .image {
+      width: 120px;
+      height: 120px;
+    }
+
+    .item-info {
+      font-size: 14px;
+    }
   }
 }
 

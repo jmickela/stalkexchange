@@ -96,8 +96,8 @@ $('.profile-photo').css({'width':chld+'px'});
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="#browse">{% trans "Browse" %}</a></li>
-        <li><a href="#about">{% trans "How It Works" %}</a></li>
-        <li><a href="#contact">{% trans "Resources" %}</a></li>
+        <li><a href="/pages/how-it-works/">{% trans "How It Works" %}</a></li>
+        <li><a href="/pages/resources/">{% trans "Resources" %}</a></li>
         {% if user and user.is_anonymous %}
             <li id="login-tab"><a href="#">{% trans "Login" %}</a></li>
         {% else %}
@@ -159,7 +159,7 @@ $('.profile-photo').css({'width':chld+'px'});
                     </a>
 
                     <a href="http://instagram.com/safecosmeticshq" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://instagram.com/safecosmeticshq', '\n\n');" target="_blank">
-                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-flickr"></i>
                     </a>
 
                     <a href="http://sharethis.com" onclick="__gaTracker('send', 'event', 'outbound-widget', 'http://sharethis.com', '\n\n');" target="_blank">
@@ -184,7 +184,7 @@ $('.profile-photo').css({'width':chld+'px'});
 
 <div class="social-contain col-md-3">
 <div class="feed-pinterest">
-<h4><i class="fa fa-pinterest social-icon"></i> {% trans "Newest Pins" %}</h4>
+<h4><i class="fa fa-flickr social-icon"></i> {% trans "Newest Photos" %}</h4>
 </div>
 </div>
 
@@ -200,9 +200,9 @@ $('.profile-photo').css({'width':chld+'px'});
 <div class="copyright">
   <div class="footer-menu">
     <a href="#">En Español / </a>
-    <a href="#">How It Works / </a>
-    <a href="#">Resources / </a>
-    <a href="/logout">Logout / </a>
+    <a href="/pages/how-it-works/">How It Works / </a>
+    <a href="/pages/resources/">Resources / </a>
+    <a href="/logout/">Logout / </a>
     <a href="#">Privacy Policy / </a>
     <a href="#">Terms</a>
   </div>
