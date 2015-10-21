@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+from os import environ
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'social.apps.django_app.default',
     #'django_messages',
     'postman',
+    'storages',
     'waliki',
 
     'produce',
@@ -139,6 +140,9 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+WALIKI_ANONYMOUS_USER_PERMISSIONS = ('view_page', 'add_page', 'change_page')
+WALIKI_LOGGED_USER_PERMISSIONS = ('view_page', 'add_page', 'change_page')
+
 MEDIA_ROOT="media"
 MEDIA_URL="/media/"
 
@@ -173,6 +177,17 @@ SOCIAL_AUTH_PIPELINE = (
     'userprofile.views.get_avatar', #save facebook profile image,
 )
 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_REGION='us-west-2'
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = "stalkexchange"
+AWS_QUERYSTRING_AUTH = False #doesn't work!
+AWS_HEADERS = {
+    'Cache-Control': 'max-age=86400',
+}
 
 # from urlparse import urlparse
 #
