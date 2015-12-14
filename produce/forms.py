@@ -17,7 +17,8 @@ class ProduceSearchForm(autocomplete_light.ModelForm):
     )
 
     type = forms.ChoiceField(choices=choices)
-    zip = forms.CharField(required=False, max_length=5, label=_('Zip Code'))
+    zip = forms.CharField(required=False, max_length=5, label=_('Zip Code'),
+                          widget=forms.TextInput(attrs={'placeholder': _('Zip Code')}))
 
     class Meta:
         model = GardenItem
