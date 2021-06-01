@@ -32,6 +32,6 @@ sh==1.11
 simplejson==3.8.0
 six==1.10.0
 static3==0.6.1
-urllib3==1.12
+urllib3==1.26.5
 waliki==0.5
 wsgiref==0.1.2
